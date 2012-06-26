@@ -4,7 +4,7 @@
  * @file
  * Implimentation of hook_form_system_theme_settings_alter()
  *
- * To use replace "gaia2" with your themeName and uncomment by
+ * To use replace "gaia" with your themeName and uncomment by
  * deleting the comment line to enable.
  *
  * @param $form: Nested array of form elements that comprise the form.
@@ -12,7 +12,7 @@
  */
 
 /* -- Delete this line to enable.
-function gaia2_form_system_theme_settings_alter(&$form,&$form_state) {
+function gaia_form_system_theme_settings_alter(&$form,&$form_state) {
   // Your custom theme settings go here...
 }
 */

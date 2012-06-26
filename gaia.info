@@ -2,8 +2,8 @@
 ; Theme information
 ; --------------------------------------------------------------------------------
 
-name = gaia2
-description = Aether starterkit for Aether, use drush to create a new subtheme using: drush aether newthemename
+name = Gaia
+description = Gaia subtheme of Aether
 screenshot = images/screenshot.png
 core = "7.x"
 engine = phptemplate
