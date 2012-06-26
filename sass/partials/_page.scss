@@ -71,7 +71,7 @@ body {
   .block {
     @include margin-trailer(0);
   }
-  .footer-columns-wrapper, .footer-wrapper {
+  .footer-wrapper {
     @include padding-leader(1);
   }
   .footer-row, .footer-columns-row {

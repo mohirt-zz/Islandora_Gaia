@@ -1827,7 +1827,7 @@ body {
 #footer .block {
   margin-bottom: 0em;
 }
-#footer .footer-columns-wrapper, #footer .footer-wrapper {
+#footer .footer-wrapper {
   padding-top: 1.357em;
 }
 #footer .footer-row, #footer .footer-columns-row {
@@ -1887,29 +1887,4 @@ div.admin-panel .body {
 .overlay #header,
 .overlay #navigation {
   display: none;
-}
-
-html, body {
-  height: 100% !important;
-}
-
-body.toolbar {
-  height: 92.5% !important;
-}
-
-#page {
-  clear: both;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -200px;
-}
-#page #page_footer {
-  height: 200px;
-}
-
-#footer {
-  clear: both;
-  padding-top: -100px;
-  height: 100px;
 }
