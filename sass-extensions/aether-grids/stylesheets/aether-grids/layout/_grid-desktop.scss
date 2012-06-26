@@ -1,0 +1,56 @@
+@import '../base';
+
+html { 
+  overflow:auto; 
+  overflow-x:hidden;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.#{$aether-limiter-class} {
+  margin-left: auto;
+  margin-right: auto;
+  width: $aether-max-desktop-width;
+}
+
+#{$aether_allColumns} {
+  @include box-sizing(border-box);
+  display: inline;
+  float: left;
+//  overflow: hidden; // If you wish to use nested columns, uncomment this
+  margin-left: $aether-gutter-width*.5;
+  margin-right: $aether-gutter-width*.5;
+}
+
+.#{$aether-gridprefix}-all-row {
+  @include clearfix();
+  margin-left: (($aether-gutter-width*.5)*1);
+  margin-right: (($aether-gutter-width*.5)*1);
+  width: grid-width($aether-desktop);
+  @if $aether-show-grid-background {
+    $aether-desktop-col-width: col-width($aether-desktop);
+    @include grid-background($aether-desktop-columns, $aether-desktop-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
+  }
+  .#{$aether-gridprefix}-all-row {
+    margin-left: (($aether-gutter-width*.5)*-1);
+    margin-right: (($aether-gutter-width*.5)*-1);
+  }
+}
+
+@include grid;
+
+.#{$aether-gridprefix}-#{$aether-desktop}-#{$aether-desktop-columns} {
+  clear: both;
+}
+
+.demo-container {
+    @include margin-trailer(1, $aether-base-font-size);
+    background-color: #afafaf;
+    border-radius: 3px 3px 3px 3px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

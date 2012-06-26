@@ -1,0 +1,137 @@
+// Legacy IE support
+$legacy-support-for-ie6: true;
+$legacy-support-for-ie7: true;
+
+// Vertical Rhythm
+$base-line-height:             19px;
+$base-font-size:               14px;
+$relative-font-sizing:         true; // output px instead of em's. cuz em's are annoying.
+$base-em-ratio:                1em / $base-font-size;
+
+// Font size constants
+$font-size-xxs:                10px;
+$font-size-xs:                 11px;
+$font-size-sm:                 12px;
+$font-size-normal:             $base-font-size;
+$font-size-md:                 14px;
+$font-size-lg:                 16px;
+$font-size-xl:                 18px;
+$font-size-xxl:                24px;
+$font-size-xxxl:               30px;
+
+// Vertical Rhythm borders
+$typographic-indent:           1.625em;
+
+// Font Stacks
+$header-font-family:           "DroidSansRegular", Arial, sans-serif !default;
+$text-font-family:             "DroidSansRegular", Arial, sans-serif !default;
+$button-font-family:           "DroidSansRegular", Arial, sans-serif !default;
+$input-font-family:            Arial, "Liberation Sans", FreeSans, sans-serif;
+$mono-font-family:             Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+
+// Common padding variables, use like standard css padding
+// Implimented in partials/page.scss
+$sidebar-padding:              15px 20px; // sidebar padding
+$content-padding:              15px 20px; // content area padding
+// Implimented in partials/blocks.scss
+$header-block-padding:         0; // Padding for header blocks
+$main-block-padding:           0; // Padding for content area blocks
+$sidebar-block-padding:        0; // Padding for sidebar blocks
+$footer-block-padding:         10px 20px 10px; // Padding for all footer blocks
+
+// Main Link Colors
+$link-color:                   #438899;
+$link-color-hover:             adjust-color($link-color, $lightness: 5, $saturation: 5);
+$link-color-visited:           $link-color;
+$link-color-active:            adjust-color($link-color, $lightness: -35);
+
+// Alternative Link Colors
+$link-color-alt:               #888;
+$link-color-hover-alt:         adjust-color($link-color-alt, $lightness: -10);
+$link-color-visited-alt:       $link-color-alt;
+$link-color-active-alt:        adjust-color($link-color-hover-alt, $lightness: -15);
+
+// Text Colors
+$text-color:                   #444444;
+$text-color-light:             adjust-color($text-color, $lightness: 45);
+$text-border:                  #d8d8d8;
+$text-border-alt:              adjust-lightness($text-border, -14);
+$text-border-alt-2:            adjust-lightness($text-border, -27);
+$text-marked:                  #ff0;
+$text-inserted:                adjust-color($text-marked, $lightness: 30);
+
+// Button colors
+$button-background:            #ddd;
+$button-border-1:              $button-background;
+$button-border-2:              adjust-lightness($button-border-1, -14);
+$button-border-3:              adjust-lightness($button-border-1, -27);
+$button-color-1:               #fff;
+$button-color-2:               adjust-lightness($button-color-1, -6);
+$button-color-3:               adjust-lightness($button-color-1, -13);
+$button-color-hover-1:         #fff;
+$button-color-hover-2:         adjust-lightness($button-color-hover-1, -13);
+$button-color-hover-3:         adjust-lightness($button-color-hover-1, -20);
+$button-color-active-1:        #fff;
+$button-color-active-2:        adjust-lightness($button-color-active-1, -13);
+$button-color-active-3:        adjust-lightness($button-color-active-1, -7);
+
+// Form input colors
+$form-border-1:                #ccc;
+$form-border-2:                adjust-lightness($form-border-1, 10);
+$form-border-3:                adjust-lightness($form-border-1, 10);
+$form-disabled:                #888888;
+
+// Used by aether-grid/debug, aether-grid/default-layout, aether-grid/mediaquery-layout.
+// Grid overlay
+$aether-show-grid-background:         false;
+$grid-background-column-color:        rgba(153, 0, 0, 0.1);
+// Vertical Rhythm
+$aether-base-line-height:             $base-line-height;
+$aether-base-font-size:               $base-font-size;
+
+// Set your limiter class, this is used to limit and center the width of the page
+$aether-limiter-class:                "limiter";
+
+// Fixed Width Layouts
+$aether-max-desktop-width:            1148px; // http://gridcalculator.dk/#/1148/12/20/20
+$aether-max-tablet-landscape-width:   968px; // http://gridcalculator.dk/#/968/12/20/20
+$aether-max-tablet-width:             752px; // http://gridcalculator.dk/#/752/12/20/20
+$aether-max-handheld-landscape-width: 428px; // http://gridcalculator.dk/#/428/12/20/20
+$aether-max-handheld-width:           308px; // http://gridcalculator.dk/#/308/12/20/20
+
+// Used by aether-grid/mediaqueries and aether-grid/visibility.
+// Media Query Breakpoints.
+$aether-break-wide:                   1160px;
+$aether-break-large:                  980px;
+$aether-break-medium:                 768px;
+$aether-break-small:                  480px;
+
+// Configuration
+$aether-desktop-columns:              12; // The number of columns in your large grid.
+$aether-tablet-columns:               12; // The number of tablet columns in your medium grid.
+$aether-handheld-columns:             12; // The number of columns in your small grid.
+$aether-gutter-width:                 20px; // Fixed gutters across all grids.
+
+// Used by aether-grid/*
+// Media prefixes
+$aether-gridprefix:                   "g";
+$aether-offset_prefix:                "o";
+$aether-pull_prefix:                  "pull";
+$aether-push_prefix:                  "push";
+$aether-desktop:                      "d";
+$aether-tablet-landscape:             "tl";
+$aether-tablet:                       "t";
+$aether-handheld-landscape:           "hl";
+$aether-handheld:                     "h";
+
+// Import compass goodies
+@import "compass/css3";
+@import "compass/support"; // Add Compass' IE and vendor prefix support variables.
+@import "compass/typography";
+@import "compass/utilities";
+
+// Import base utilities which create no ocde unless used.
+@import 'base/utilities';
+// Import base mixins which create no code unless used.
+@import 'base/mixin-boxbg';
+@import 'base/mixin-pill';

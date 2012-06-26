@@ -1,0 +1,47 @@
+// THIS IS A REFERENCE ONLY SASS FILE, DO NOT MODIFY.
+// If you wish to override any of these variables, copy them your _base file
+// underneath your existing variables. Be sure to set the base-font-size, to whatever
+// your base font size is or grid-debug will not reflect your vertical rhythm.
+
+// Set your limiter class, this is used to limit and center the width of the page
+$aether-limiter-class:                "limiter";
+
+// Fixed Width Layouts
+$aether-max-desktop-width:            1148px; // http://gridcalculator.dk/#/1148/12/20/20
+$aether-max-tablet-landscape-width:   968px; // http://gridcalculator.dk/#/968/12/20/20
+$aether-max-tablet-width:             752px; // http://gridcalculator.dk/#/752/12/20/20
+$aether-max-handheld-landscape-width: 428px; // http://gridcalculator.dk/#/428/12/20/20
+$aether-max-handheld-width:           308px; // http://gridcalculator.dk/#/308/12/20/20
+
+// Used by aether-grid/mediaqueries and aether-grid/visibility.
+// Media Query Breakpoints.
+$aether-break-wide:                   1160px;
+$aether-break-large:                  980px;
+$aether-break-medium:                 768px;
+$aether-break-small:                  480px;
+
+// Used by aether-grid/debug, aether-grid/default-layout, aether-grid/mediaquery-layout.
+// Grid overlay
+$aether-show-grid-background:         false;
+$grid-background-column-color:        rgba(153, 0, 0, 0.1);
+// Vertical Rhythm
+$aether-base-line-height:             18px;
+$aether-base-font-size:               13px;
+
+// Used by aether-grid/*
+// Media prefixes
+$aether-gridprefix:                   "g";
+$aether-offset_prefix:                "o";
+$aether-pull_prefix:                  "pull";
+$aether-push_prefix:                  "push";
+$aether-desktop:                      "d";
+$aether-tablet-landscape:             "tl";
+$aether-tablet:                       "t";
+$aether-handheld-landscape:           "hl";
+$aether-handheld:                     "h";
+
+// Configuration
+$aether-desktop-columns:              12; // The number of columns in your large grid.
+$aether-tablet-columns:               12; // The number of tablet columns in your medium grid.
+$aether-handheld-columns:             12; // The number of columns in your small grid.
+$aether-gutter-width:                 20px; // Fixed gutters across all grids.

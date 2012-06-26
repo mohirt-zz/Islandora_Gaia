@@ -1,0 +1,30 @@
+@import '../base';
+
+/*  Tablet Portrait */
+@include respond-to(tablet)  {
+  body{}
+  .#{$aether-limiter-class} {
+  width: $aether-max-tablet-width;
+  }
+
+  .#{$aether-gridprefix}-all-row {
+    width: grid-width($aether-tablet);
+    @if $aether-show-grid-background {
+      $aether-tablet-col-width: col-width($aether-tablet);
+      @include grid-background($aether-tablet-columns, $aether-tablet-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
+    }
+  }
+
+  // Zero out desktop push/pull/offset to avoid specificity problems 
+  // in the media class stack when moving things like sidebars around.
+  // This must come before column classes.
+  @include zero-d-classes();
+
+  // Generate column classes for tablet media
+  @include grid($aether-tablet);
+
+  .#{$aether-gridprefix}-#{$aether-tablet}-#{$aether-tablet-columns} {
+    clear: both;
+  }
+
+}

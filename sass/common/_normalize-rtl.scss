@@ -1,0 +1,18 @@
+/* Normalize RTL */
+
+/* Lists */
+
+dd {
+  margin: 0 $typographic-indent 0 0; // RTL
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+
+menu,
+ol,
+ul,
+.item-list ul /* Drupal override */ {
+  padding: 0 $typographic-indent 0 0; // RTL
+}

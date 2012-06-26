@@ -1,0 +1,32 @@
+/*
+ * Blocks
+ */
+
+.block {
+  @include margin-trailer(1, $base-font-size);
+}
+
+#header {
+  .block-inner {
+    padding: $header-block-padding;
+  }
+}
+
+.sidebar-first,
+.sidebar-second {
+  .block-inner {
+    padding: $sidebar-block-padding;
+  }
+}
+
+#main {
+  .block-inner {
+    padding: $main-block-padding;
+  }
+}
+
+#footer {
+  .block-inner {
+    padding: $footer-block-padding;
+  }
+}

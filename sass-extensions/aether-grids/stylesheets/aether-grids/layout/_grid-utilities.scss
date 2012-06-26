@@ -1,0 +1,153 @@
+@import '../base';
+
+@function col-width($aether-media:$aether-desktop, $aether-max-width:$aether-max-desktop-width, $aether-columns:$aether-desktop-columns) {
+  @if $aether-media == $aether-handheld {
+    $aether-columns:$aether-handheld-columns;
+    $aether-max-width:$aether-max-handheld-width;
+  }
+  @else if $aether-media == $aether-handheld-landscape {
+    $aether-columns:$aether-handheld-columns;
+    $aether-max-width:$aether-max-handheld-landscape-width;
+  }
+  @else if $aether-media == $aether-tablet {
+    $aether-columns:$aether-tablet-columns;
+    $aether-max-width:$aether-max-tablet-width;
+  }
+  @else if $aether-media == $aether-tablet-landscape {
+    $aether-columns:$aether-tablet-columns;
+    $aether-max-width:$aether-max-tablet-landscape-width;
+  }
+  @else if $aether-media == $aether-desktop {
+    $aether-columns:$aether-desktop-columns;
+    $aether-max-width:$aether-max-desktop-width;
+  }
+  @return (($aether-max-width - $aether-gutter-width) - ($aether-gutter-width * $aether-columns)) / $aether-columns;
+}
+
+@function grid-width($aether-media:$aether-desktop, $aether-col-width:col-width($aether-desktop), $aether-columns:$aether-desktop-columns) {
+  @if $aether-media == $aether-handheld {
+    $aether-col-width:col-width($aether-handheld);
+    $aether-columns:$aether-handheld-columns;
+  }
+  @else if $aether-media == $aether-handheld-landscape {
+    $aether-col-width:col-width($aether-handheld-landscape);
+    $aether-columns:$aether-handheld-columns;
+  }
+  @else if $aether-media == $aether-tablet {
+    $aether-col-width:col-width($aether-tablet);
+    $aether-columns:$aether-tablet-columns;
+  }
+  @else if $aether-media == $aether-tablet-landscape {
+    $aether-col-width:col-width($aether-tablet-landscape);
+    $aether-columns:$aether-tablet-columns;
+  }
+  @else if $aether-media == $aether-desktop {
+    $aether-col-width:col-width($aether-desktop);
+    $aether-columns:$aether-desktop-columns;
+  }
+  @return ($aether-col-width * $aether-columns) + ($aether-gutter-width * $aether-columns);
+}
+
+@mixin grid($aether-media:$aether-desktop, $aether-columns:$aether-desktop-columns, $aether-grid-width:grid-width($aether-desktop), $aether-column-width:col-width($aether-desktop)) {
+
+  @if $aether-media == $aether-handheld {
+  $aether-column-width:col-width($aether-handheld);
+  $aether-columns:$aether-handheld-columns;
+  $aether-grid-width:grid-width($aether-handheld);
+  }
+  @if $aether-media == $aether-handheld-landscape {
+  $aether-column-width:col-width($aether-handheld-landscape);
+  $aether-columns:$aether-handheld-columns;
+  $aether-grid-width:grid-width($aether-handheld-landscape);
+  }
+  @else if $aether-media == $aether-tablet {
+  $aether-column-width:col-width($aether-tablet);
+  $aether-columns:$aether-tablet-columns;
+  $aether-grid-width:grid-width($aether-tablet);
+  }
+  @else if $aether-media == $aether-tablet-landscape {
+  $aether-column-width:col-width($aether-tablet-landscape);
+  $aether-columns:$aether-tablet-columns;
+  $aether-grid-width:grid-width($aether-tablet-landscape);
+  }
+  @else if $aether-media == $aether-desktop {
+  $aether-column-width:col-width($aether-desktop);
+  $aether-columns:$aether-desktop-columns;
+  $aether-grid-width:grid-width($aether-desktop);
+  }
+
+  // generate column classes
+  @for $aether-n from 1 through $aether-columns {
+    .g-#{$aether-media}-#{$aether-n} {
+      @include column($aether-n,$aether-columns,$aether-grid-width,$aether-column-width);
+    }
+  }
+
+  // generate offset classes
+  @for $aether-n from 1 through ($aether-columns - 1) {
+    .g-#{$aether-media}-#{$aether-offset_prefix}-#{$aether-n} {
+      @include offset($aether-n,$aether-columns,$aether-grid-width,$aether-column-width);
+    }
+  }
+
+  // generate push classes
+  @for $aether-n from 1 through ($aether-columns - 1) {
+    .g-#{$aether-media}-#{$aether-push_prefix}-#{$aether-n} {
+      @include push($aether-n,$aether-columns,$aether-grid-width,$aether-column-width);
+    }
+  }
+
+  // generate pull classes
+  @for $aether-n from 1 through ($aether-columns - 1) {
+    .g-#{$aether-media}-#{$aether-pull_prefix}-#{$aether-n} {
+      @include pull($aether-n,$aether-columns,$aether-grid-width,$aether-column-width);
+    }
+  }
+
+}
+
+@mixin column($aether-n,$aether-columns:$aether-desktop-columns,$aether-grid-width:grid-width($aether-desktop),$aether-column-width:col-width($aether-desktop)) {
+  width: $aether-grid-width*(((($aether-gutter-width+$aether-column-width)*$aether-n)-$aether-gutter-width) / $aether-grid-width);
+}
+
+@mixin offset($aether-n,$aether-columns:$aether-desktop-columns,$aether-grid-width:grid-width($aether-desktop),$aether-column-width:col-width($aether-desktop)) {
+  margin-left: ($aether-grid-width*(((($aether-gutter-width+$aether-column-width)*$aether-n)-$aether-gutter-width) / $aether-grid-width)) + ($aether-grid-width*(($aether-gutter-width)/$aether-grid-width));
+}
+
+@mixin push($aether-n,$aether-columns:$aether-desktop-columns,$aether-grid-width:grid-width($aether-desktop),$aether-column-width:col-width($aether-desktop)) {
+  margin-left: ($aether-grid-width*(((($aether-gutter-width+$aether-column-width)*$aether-n)-$aether-gutter-width) / $aether-grid-width)) + ($aether-grid-width*(($aether-gutter-width)/$aether-grid-width)) + $aether-gutter-width/2;
+  margin-right: (-$aether-grid-width*(((($aether-gutter-width+$aether-column-width)*$aether-n)-$aether-gutter-width) / $aether-grid-width)) + (-$aether-grid-width*(($aether-gutter-width)/$aether-grid-width)) + $aether-gutter-width/2;
+}
+
+@mixin pull($aether-n,$aether-columns:$aether-desktop-columns,$aether-grid-width:grid-width($aether-desktop),$aether-column-width:col-width($aether-desktop)) {
+  margin-left: (-$aether-grid-width*(((($aether-gutter-width+$aether-column-width)*$aether-n)-$aether-gutter-width) / $aether-grid-width)) + (-$aether-grid-width*(($aether-gutter-width)/$aether-grid-width)) + $aether-gutter-width/2;
+}
+
+// Create a variable that stores all column classes
+$aether_allColumns: "#{enumerate(".#{$aether-gridprefix}-#{$aether-handheld}", 1, $aether-handheld-columns)},
+#{enumerate(".#{$aether-gridprefix}-#{$aether-handheld-landscape}", 1, $aether-handheld-columns)},
+#{enumerate(".#{$aether-gridprefix}-#{$aether-tablet}", 1, $aether-tablet-columns)},
+#{enumerate(".#{$aether-gridprefix}-#{$aether-tablet-landscape}", 1, $aether-tablet-columns)},
+#{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, $aether-desktop-columns)}";
+
+// Zero out desktop push/pull/offset to avoid specificity problems 
+// in the media class stack when moving things like sidebars around.
+// This must come before column classes.
+@mixin zero-d-classes() {
+  #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-#{$aether-offset_prefix}", 1, $aether-desktop-columns)} {
+    margin-left: 0;
+  }
+
+  #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-#{$aether-push_prefix}", 1, $aether-desktop-columns)} {
+    margin-left: $aether-gutter-width*.5;
+    margin-right: $aether-gutter-width*.5;
+  }
+
+  #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-#{$aether-pull_prefix}", 1, $aether-desktop-columns)} {
+    margin-left: $aether-gutter-width*.5;
+  }
+
+  .g-d-clear {
+    clear: none;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../base';
+
+// Desktop
+.#{$aether-gridprefix}-all-row {
+  $aether-desktop-col-width: col-width($aether-desktop);
+  @include grid-background($aether-desktop-columns, $aether-desktop-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
+}
+
+@include respond-to(handheld) {
+  .#{$aether-gridprefix}-all-row {
+    $aether-handheld-col-width: col-width($aether-handheld);
+    @include grid-background($aether-handheld-columns, $aether-handheld-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
+  }
+}
+
+@include respond-to(handheld-landscape) {
+  .#{$aether-gridprefix}-all-row {
+    $aether-handheld-landscape-col-width: col-width($aether-handheld-landscape);
+    @include grid-background($aether-handheld-columns, $aether-handheld-landscape-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
+  }
+}
+
+@include respond-to(tablet)  {
+  .#{$aether-gridprefix}-all-row {
+    $aether-tablet-col-width: col-width($aether-tablet);
+    @include grid-background($aether-tablet-columns, $aether-tablet-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
+  }
+}
+
+@include respond-to(tablet-landscape) {
+  .#{$aether-gridprefix}-all-row {
+    $aether-tablet-landscape-col-width: col-width($aether-tablet-landscape);
+    @include grid-background($aether-tablet-columns, $aether-tablet-landscape-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
+  }
+}

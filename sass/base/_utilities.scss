@@ -1,0 +1,160 @@
+//
+// Sass mixins
+//
+// To use a mixin in this file, add this line to the top of your .scss file:
+//   @import "base";
+// Then to use a mixin for a particular rule, add this inside the ruleset's
+// curly brackets:
+//   @include mix-in-name;
+
+$legacy-support-for-ie6: true !default;
+$legacy-support-for-ie7: true !default;
+
+
+// clearfix as defined by Drupal
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+  // IE6
+  @if $legacy-support-for-ie6 {
+    .ie6 & {
+      height: 1%;
+    }
+  }
+  // IE7
+  @if $legacy-support-for-ie7 {
+    .ie7 & {
+      min-height: 1%;
+    }
+  }
+}
+
+// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: static !important;
+    width: auto;
+  }
+}
+
+// The word "Unpublished" displayed underneath unpublished nodes and comments.
+@mixin unpublished-div {
+  color: #d8d8d8;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  height: 0;
+  line-height: 1;
+  overflow: visible;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word; // A very nice CSS3 property
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    .ie6-7 &>* {
+      position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+    }
+  }
+}
+
+// Center-align a block level element
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Opacity
+@mixin opacity($opacity: 100) {
+  filter: alpha(opacity=$opacity);
+         opacity: $opacity / 100;
+  -khtml-opacity: $opacity / 100;
+    -moz-opacity: $opacity / 100;
+}
+
+// Turn off bullets for an element of a list
+@mixin no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+// Hide for both screenreaders and browsers
+// css-discuss.incutio.com/wiki/Screenreader_Visibility
+@mixin hide-from-all {
+  display:none;
+  visibility:hidden;
+}
+
+// Hide only visually, but have it available for screenreaders
+// www.webaim.org/techniques/css/invisiblecontent/
+// Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal!
+@mixin screenreaders-only {
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible {
+  visibility: hidden;
+}
+
+// @font-face
+@mixin font-face-family($family, $file) {
+  @font-face {
+    font-family: '#{$family}'; font-style: normal;
+    font-weight: normal; 
+    src: font-url('#{$file}.eot'); 
+    src: font-url('#{$file}.eot?#iefix') format('embedded-opentype'),
+         font-url('#{$file}.woff') format('woff'),
+         font-url('#{$file}.ttf') format('truetype'),
+         font-url('#{$file}.svg##{$family}') format('svg'),
+         font-url('#{$file}.otf') format('opentype');
+  }
+}
+
+@mixin sticky-footer($footer-height, $root-selector: unquote("#page"), $root-footer-selector: unquote("#page_footer"), $footer-selector: unquote("#footer")) {
+  html, body {
+    height: 100% !important;
+  }
+  body.toolbar {
+    height: 92.5% !important;
+  }
+  #{$root-selector} {
+    clear: both;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -$footer-height*2;
+  #{$root-footer-selector} {
+      height: $footer-height*2;
+    }
+  }
+  #{$footer-selector} {
+    clear: both;
+    padding-top: -$footer-height;
+    height: $footer-height;
+  }
+}
