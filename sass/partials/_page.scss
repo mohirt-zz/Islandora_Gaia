@@ -58,15 +58,6 @@ body {
   border: 1px solid $text-border;
 }
 
-#content .content-inner {
-  padding: $content-padding;
-  @include margin-trailer(1);
-}
-
-.sidebar .sidebar-inner {
-  padding: $sidebar-padding;
-}
-
 #footer {
   .block {
     @include margin-trailer(0);

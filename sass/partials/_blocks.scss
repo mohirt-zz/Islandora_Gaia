@@ -6,27 +6,15 @@
   @include margin-trailer(1, $base-font-size);
 }
 
-#header {
-  .block-inner {
-    padding: $header-block-padding;
-  }
+#content .content-block {
+  padding: 15px 20px 0 20px;
+  @include margin-trailer(1);
 }
 
-.sidebar-first,
-.sidebar-second {
-  .block-inner {
-    padding: $sidebar-block-padding;
-  }
+.sidebar .block {
+  padding: 15px 20px 0 20px;
 }
 
-#main {
-  .block-inner {
-    padding: $main-block-padding;
-  }
-}
-
-#footer {
-  .block-inner {
-    padding: $footer-block-padding;
-  }
+#footer .block {
+  padding: 10px 15px 10px;
 }

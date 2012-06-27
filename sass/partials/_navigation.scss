@@ -48,14 +48,12 @@
     float: left;
   }
   a {
-    &:link {
-      @include transition-duration(0.2s);
-      @include transition-timing-function(ease-in);
-      background-color: #f5f8fA;
-      display: block;
-      padding: 0.75em 1.5em;
-      text-decoration: none;
-    }
+    @include transition-duration(0.2s);
+    @include transition-timing-function(ease-in);
+    background-color: #f5f8fA;
+    display: block;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
     &:hover, &:focus {
       background-color: #f0f5f8;
       display: block;

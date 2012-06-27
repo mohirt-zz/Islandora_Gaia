@@ -1531,7 +1531,7 @@ table tr.odd {
 #secondary li {
   float: left;
 }
-#secondary a:link {
+#secondary a {
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   -ms-transition-duration: 0.2s;
@@ -1715,21 +1715,17 @@ ul li.leaf {
   margin-bottom: 1.357em;
 }
 
-#header .block-inner {
-  padding: 0;
+#content .content-block {
+  padding: 15px 20px 0 20px;
+  margin-bottom: 1.357em;
 }
 
-.sidebar-first .block-inner,
-.sidebar-second .block-inner {
-  padding: 0;
+.sidebar .block {
+  padding: 15px 20px 0 20px;
 }
 
-#main .block-inner {
-  padding: 0;
-}
-
-#footer .block-inner {
-  padding: 10px 20px 10px;
+#footer .block {
+  padding: 10px 15px 10px;
 }
 
 /*
@@ -1813,15 +1809,6 @@ body {
   border-radius: 5px;
   background-color: white;
   border: 1px solid #d8d8d8;
-}
-
-#content .content-inner {
-  padding: 15px 20px;
-  margin-bottom: 1.357em;
-}
-
-.sidebar .sidebar-inner {
-  padding: 15px 20px;
 }
 
 #footer .block {

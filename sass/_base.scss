@@ -29,16 +29,6 @@ $button-font-family:           "DroidSansRegular", Arial, sans-serif !default;
 $input-font-family:            Arial, "Liberation Sans", FreeSans, sans-serif;
 $mono-font-family:             Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 
-// Common padding variables, use like standard css padding
-// Implimented in partials/page.scss
-$sidebar-padding:              15px 20px; // sidebar padding
-$content-padding:              15px 20px; // content area padding
-// Implimented in partials/blocks.scss
-$header-block-padding:         0; // Padding for header blocks
-$main-block-padding:           0; // Padding for content area blocks
-$sidebar-block-padding:        0; // Padding for sidebar blocks
-$footer-block-padding:         10px 20px 10px; // Padding for all footer blocks
-
 // Main Link Colors
 $link-color:                   #438899;
 $link-color-hover:             adjust-color($link-color, $lightness: 5, $saturation: 5);
