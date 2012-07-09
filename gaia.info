@@ -122,7 +122,7 @@ settings[grid_prefix5] = g-h-
 settings[layout_options][] = '1'
 
 ; Enable navigation to grid, '0' for off, '2' for on.
-settings[layout_options][] = '2'
+settings[layout_options][] = '0'
 
 ; Grid debugging css, '0' for off, '1' for on.
 settings[grid_background][] = '0'
