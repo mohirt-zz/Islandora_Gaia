@@ -72,7 +72,7 @@ stylesheets[all][] = system.menus-rtl.css
 stylesheets[all][] = css/layout/aether-default.css
 stylesheets[all][] = css/layout/aether-visibility.css
 stylesheets[all][] = css/screen.css
-stylesheets[all][] = css/custom.css
+stylesheets[all][] = css/custom-scss.css
 stylesheets[all][] = css/custom-css.css
 stylesheets[all][] = css/wireframes.css
 
@@ -101,7 +101,7 @@ settings[aether_polyfills][] = imgsizer
 settings[aether_polyfills][] = responsive_tables
 settings[aether_polyfills][] = ios_orientation_fix
 
-; Amount of media queries to use.
+; Amount of media queries to use, must equal 5 for now.
 settings[media_queries] = '5'
 
 ; Semantic names of each media query
@@ -118,18 +118,18 @@ settings[grid_prefix3] = g-t-
 settings[grid_prefix4] = g-hl-
 settings[grid_prefix5] = g-h-
 
-; Enable all 5 media queries, set to '' to turn off
+; Enable all 5 media queries, '0' for off, '1' for on.
 settings[layout_options][] = '1'
 
-; Enable navigation to grid, set to '' to turn off
-settings[layout_options][] = ''
+; Enable navigation to grid, '0' for off, '2' for on.
+settings[layout_options][] = '2'
 
-; Grid debugging css
-settings[grid_background][] = ''
+; Grid debugging css, '0' for off, '1' for on.
+settings[grid_background][] = '0'
 
-; Gutter and Grid numbers must match sass variables
+; Gutter and Grid numbers must match sass variables.
 
-; Gutter width choices in pixels
+; Gutter width choices in pixels.
 settings[gutter_width] = 20
 
 ; Supported grids for each of the 5 media queries.
@@ -147,11 +147,11 @@ settings[theme_grid_options5][] = grid12-308
 ; Sidebar layout defaults for each of the 5 media queries.
 settings[sidebar_layout1] = '1'
 settings[sidebar_layout2] = '1'
-settings[sidebar_layout3] = '1'
-settings[sidebar_layout4] = '6'
-settings[sidebar_layout5] = '6'
+settings[sidebar_layout3] = '8'
+settings[sidebar_layout4] = '9'
+settings[sidebar_layout5] = '9'
 
-; User region width defaults for each of the 5 media queries
+; User region width defaults for each of the 5 media queries.
 settings[user_first_width1] = '6'
 settings[user_first_width2] = '6'
 settings[user_first_width3] = '6'
@@ -164,7 +164,7 @@ settings[user_second_width3] = '6'
 settings[user_second_width4] = '12'
 settings[user_second_width5] = '12'
 
-; Header region width defaults for each of the 5 media queries
+; Header region width defaults for each of the 5 media queries.
 settings[header_first_width1] = '4'
 settings[header_first_width2] = '4'
 settings[header_first_width3] = '6'
@@ -183,7 +183,7 @@ settings[header_third_width3] = '12'
 settings[header_third_width4] = '12'
 settings[header_third_width5] = '12'
 
-; Preface region width defaults for each of the 5 media queries
+; Preface region width defaults for each of the 5 media queries.
 settings[preface_first_width1] = '4'
 settings[preface_first_width2] = '4'
 settings[preface_first_width3] = '6'
@@ -209,7 +209,7 @@ settings[nav_link_width3] = '2'
 settings[nav_link_width4] = '4'
 settings[nav_link_width5] = '4'
 
-; navigation region width defaults for each of the 5 media queries
+; Navigation region width defaults for each of the 5 media queries.
 settings[navigation_first_width1] = '9'
 settings[navigation_first_width2] = '9'
 settings[navigation_first_width3] = '12'
@@ -235,7 +235,7 @@ settings[sidebar_second_width3] = '3'
 settings[sidebar_second_width4] = '3'
 settings[sidebar_second_width5] = '3'
 
-; Postscript region width defaults for each of the 5 media queries
+; Postscript region width defaults for each of the 5 media queries.
 settings[postscript_first_width1] = '3'
 settings[postscript_first_width2] = '3'
 settings[postscript_first_width3] = '6'
@@ -260,7 +260,7 @@ settings[postscript_fourth_width3] = '6'
 settings[postscript_fourth_width4] = '12'
 settings[postscript_fourth_width5] = '12'
 
-; Footer region width defaults for each of the 5 media queries
+; Footer region width defaults for each of the 5 media queries.
 settings[footer_first_width1] = '3'
 settings[footer_first_width2] = '3'
 settings[footer_first_width3] = '6'
