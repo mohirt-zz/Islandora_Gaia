@@ -1,27 +1,27 @@
 @import '../base';
 
-/*  Handheld Portrait */
+/* Handheld Portrait */
 @include respond-to(handheld) {
-  body {}
-  .#{$aether-limiter-class} {
-  width: $aether-max-handheld-width;
+  @include limiter($aether-limiter-class, $aether-handheld-grid-width, $aether-break-smallest, min);
+
+  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld}", 1, $aether-handheld-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld}-right", 1, $aether-handheld-columns, "")};
+
+  #{$aether_allColumns} {
+    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing);
   }
 
   .#{$aether-gridprefix}-all-row {
-    width: grid-width($aether-handheld);
-    @if $aether-show-grid-background {
-      $aether-handheld-col-width: col-width($aether-handheld);
-      @include grid-background($aether-handheld-columns, $aether-handheld-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
-    }
+    @include container(full,$aether-handheld-grid-width);
+    @include aether-grid-background($aether-handheld-columns, $aether-handheld-grid-width);
   }
 
   // Zero out desktop push/pull/offset to avoid specificity problems 
   // in the media class stack when moving things like sidebars around.
   // This must come before column classes.
-  @include zero-d-classes();
+  @include zero-classes($aether-desktop,$aether-desktop-columns);
 
   // Generate column classes for handheld media
-  @include grid($aether-handheld);
+  @include grid-classes($aether-handheld,$aether-handheld-columns,$aether-handheld-grid-width);
 
   .#{$aether-gridprefix}-#{$aether-handheld}-#{$aether-handheld-columns} {
     clear: both;

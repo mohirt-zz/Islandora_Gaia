@@ -21,7 +21,7 @@
 
 #primary {
   li {
-    @include horizontal-list-item(1em, left);
+    @include horizontal-list-item(1.38462em, left);
     &.first {
       margin-left: 3px;
     }

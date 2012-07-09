@@ -11,3 +11,7 @@ images_dir = "images"
 relative_assets = true
 
 sass_options = (environment == :development) ? {:debug_info => true} : {:always_update => true}
+
+# Increased decimal precision.
+# 33.33333% instead of 33.333%
+Sass::Script::Number.precision = 5

@@ -2,25 +2,27 @@
 
 /* Tablet Landscape */
 @include respond-to(tablet-landscape) {
-  body{}
-  .#{$aether-limiter-class} {
-  width: $aether-max-tablet-landscape-width;
+
+@include limiter($aether-limiter-class, $aether-tablet-landscape-grid-width, $aether-break-large);
+
+  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-tablet-landscape}", 1, $aether-tablet-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-tablet-landscape}-right", 1, $aether-tablet-columns, "")};
+
+  #{$aether_allColumns} {
+    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing);
   }
 
   .#{$aether-gridprefix}-all-row {
-    width: grid-width($aether-tablet-landscape);
-    @if $aether-show-grid-background {
-      $aether-tablet-landscape-col-width: col-width($aether-tablet-landscape);
-      @include grid-background($aether-tablet-columns, $aether-tablet-landscape-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
-    }
+    @include container(full,$aether-tablet-landscape-grid-width);
+    @include aether-grid-background($aether-tablet-columns, $aether-tablet-landscape-grid-width);
   }
 
   // Zero out desktop push/pull/offset to avoid specificity problems 
   // in the media class stack when moving things like sidebars around.
   // This must come before column classes.
-  @include zero-d-classes();
+  @include zero-classes($aether-desktop,$aether-desktop-columns);
 
-  @include grid($aether-tablet-landscape);
+  // Generate column classes for tablet media
+  @include grid-classes($aether-tablet-landscape,$aether-tablet-columns,$aether-tablet-landscape-grid-width);
 
   .#{$aether-gridprefix}-#{$aether-tablet-landscape}-#{$aether-tablet-columns} {
     clear: both;

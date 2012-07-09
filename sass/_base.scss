@@ -71,23 +71,10 @@ $form-border-2:                adjust-lightness($form-border-1, 10);
 $form-border-3:                adjust-lightness($form-border-1, 10);
 $form-disabled:                #888888;
 
-// Used by aether-grid/debug, aether-grid/default-layout, aether-grid/mediaquery-layout.
-// Grid overlay
-$aether-show-grid-background:         false;
-$grid-background-column-color:        rgba(153, 0, 0, 0.1);
-// Vertical Rhythm
-$aether-base-line-height:             $base-line-height;
-$aether-base-font-size:               $base-font-size;
-
 // Set your limiter class, this is used to limit and center the width of the page
 $aether-limiter-class:                "limiter";
-
-// Fixed Width Layouts
-$aether-max-desktop-width:            1148px; // http://gridcalculator.dk/#/1148/12/20/20
-$aether-max-tablet-landscape-width:   968px; // http://gridcalculator.dk/#/968/12/20/20
-$aether-max-tablet-width:             752px; // http://gridcalculator.dk/#/752/12/20/20
-$aether-max-handheld-landscape-width: 428px; // http://gridcalculator.dk/#/428/12/20/20
-$aether-max-handheld-width:           308px; // http://gridcalculator.dk/#/308/12/20/20
+// Either use a fluid or fixed layout
+$aether-grid-type:                    fixed;
 
 // Used by aether-grid/mediaqueries and aether-grid/visibility.
 // Media Query Breakpoints.
@@ -95,12 +82,26 @@ $aether-break-wide:                   1160px;
 $aether-break-large:                  980px;
 $aether-break-medium:                 768px;
 $aether-break-small:                  480px;
+$aether-break-smallest:               400px;
 
-// Configuration
-$aether-desktop-columns:              12; // The number of columns in your large grid.
-$aether-tablet-columns:               12; // The number of tablet columns in your medium grid.
-$aether-handheld-columns:             12; // The number of columns in your small grid.
-$aether-gutter-width:                 20px; // Fixed gutters across all grids.
+// Fixed Width Layouts
+$aether-desktop-grid-width:           1148px; // http://gridcalculator.dk/#/1148/12/20/20
+$aether-tablet-landscape-grid-width:  968px; // http://gridcalculator.dk/#/968/12/20/20
+$aether-tablet-grid-width:            752px; // http://gridcalculator.dk/#/752/12/20/20
+$aether-handheld-landscape-grid-width:428px; // http://gridcalculator.dk/#/428/12/20/20
+$aether-handheld-grid-width:          308px; // http://gridcalculator.dk/#/308/12/20/20
+
+// Used by aether-grid/debug, aether-grid/default-layout, aether-grid/mediaquery-layout.
+// Grid overlay
+$aether-show-grid-background:         false;
+$show-column-grid-backgrounds:        true;
+$grid-background-column-color:        hsl(0, 68%, 96%);
+$show-baseline-grid-backgrounds:      true;
+$grid-background-baseline-color:      hsl(0, 0%, 87%);
+
+// Vertical Rhythm
+$aether-base-line-height:             18px;
+$aether-base-font-size:               13px;
 
 // Used by aether-grid/*
 // Media prefixes
@@ -113,6 +114,18 @@ $aether-tablet-landscape:             "tl";
 $aether-tablet:                       "t";
 $aether-handheld-landscape:           "hl";
 $aether-handheld:                     "h";
+
+// Configuration
+$aether-desktop-columns:              12; // The number of columns in your large grid.
+$aether-tablet-columns:               12; // The number of tablet columns in your medium grid.
+$aether-handheld-columns:             12; // The number of columns in your small grid.
+$aether-gutter-width:                 20px; // Fixed gutters across all grids.
+
+// Float direction
+$aether-float-direction:              left;
+
+// Box model
+$aether-box-sizing:                   border-box;
 
 // Import compass goodies
 @import "compass/css3";

@@ -1,0 +1,19 @@
+@import '../base';
+
+$aether-float-direction: right;
+
+/* Handheld Landscape */
+@include respond-to(handheld-landscape) {
+
+  @include zero-classes($aether-desktop,$aether-desktop-columns);
+
+  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld-landscape}", 1, $aether-handheld-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld-landscape}-right", 1, $aether-handheld-columns, "")};
+
+  #{$aether_allColumns} {
+	float: $aether-float-direction;
+  }
+
+  // Generate column classes for handheld landscape media
+  @include grid-classes($aether-handheld-landscape,$aether-handheld-columns,$aether-handheld-landscape-grid-width,rtl);
+
+}

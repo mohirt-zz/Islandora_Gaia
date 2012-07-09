@@ -1,6 +1,7 @@
 description "Aether Grids for Compass"
 
 stylesheet 'layout/_aether-variable-reference.scss', :media => 'all'
+stylesheet 'layout/_layout-extends.scss', :media => 'all'
 stylesheet 'layout/aether-debug.scss', :media => 'all'
 stylesheet 'layout/aether-default.scss', :media => 'all'
 stylesheet 'layout/aether-mediaqueries.scss', :media => 'all'

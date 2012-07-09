@@ -1,56 +1,36 @@
 @import '../base';
+@import "compass/utilities/general/float";
 
 html { 
   overflow:auto; 
   overflow-x:hidden;
 }
 
-.clearfix {
-  @include clearfix();
-}
+//$max-limiter-width: $aether-desktop-grid-width;
+@include limiter($aether-limiter-class, $aether-desktop-grid-width, $aether-break-wide, max);
 
-.#{$aether-limiter-class} {
-  margin-left: auto;
-  margin-right: auto;
-  width: $aether-max-desktop-width;
-}
+//.limiter {
+//  max-width: $aether-desktop-grid-width;
+//}
+
+$aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, $aether-desktop-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-right", 1, $aether-desktop-columns, "")};
 
 #{$aether_allColumns} {
-  @include box-sizing(border-box);
-  display: inline;
-  float: left;
-//  overflow: hidden; // If you wish to use nested columns, uncomment this
-  margin-left: $aether-gutter-width*.5;
-  margin-right: $aether-gutter-width*.5;
+  @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing);
 }
 
 .#{$aether-gridprefix}-all-row {
-  @include clearfix();
-  margin-left: (($aether-gutter-width*.5)*1);
-  margin-right: (($aether-gutter-width*.5)*1);
-  width: grid-width($aether-desktop);
-  @if $aether-show-grid-background {
-    $aether-desktop-col-width: col-width($aether-desktop);
-    @include grid-background($aether-desktop-columns, $aether-desktop-col-width, $aether-gutter-width, $aether-base-line-height, $aether-gutter-width*.5);
-  }
+  @include container(full,$aether-desktop-grid-width);
+  @include aether-grid-background($aether-desktop-columns, $aether-desktop-grid-width);
   .#{$aether-gridprefix}-all-row {
-    margin-left: (($aether-gutter-width*.5)*-1);
-    margin-right: (($aether-gutter-width*.5)*-1);
+    @include container(nested);
   }
 }
 
-@include grid;
+// Generate column classes for desktop media
+@include grid-classes($aether-desktop,$aether-desktop-columns,$aether-desktop-grid-width);
 
+// Clear full width classes
 .#{$aether-gridprefix}-#{$aether-desktop}-#{$aether-desktop-columns} {
   clear: both;
-}
-
-.demo-container {
-    @include margin-trailer(1, $aether-base-font-size);
-    background-color: #afafaf;
-    border-radius: 3px 3px 3px 3px;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }

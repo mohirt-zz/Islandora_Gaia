@@ -2,15 +2,14 @@
 // underneath, your existing variables. Be sure to set the base-font-size, to whatever
 // your base font size is or grid-debug will not reflect your vertical rhythm.
 
+// Legacy IE Support
+$legacy-support-for-ie6:              true !default;
+$legacy-support-for-ie7:              true !default;
+
 // Set your limiter class, this is used to limit and center the width of the page
 $aether-limiter-class:                "limiter" !default;
-
-// Fixed Width Layouts
-$aether-max-desktop-width:            1148px !default; // http://gridcalculator.dk/#/1148/12/20/20
-$aether-max-tablet-landscape-width:   968px !default; // http://gridcalculator.dk/#/968/12/20/20
-$aether-max-tablet-width:             752px !default; // http://gridcalculator.dk/#/752/12/20/20
-$aether-max-handheld-landscape-width: 428px !default; // http://gridcalculator.dk/#/428/12/20/20
-$aether-max-handheld-width:           308px !default; // http://gridcalculator.dk/#/308/12/20/20
+// Either use a fluid or fixed layout
+$aether-grid-type: 					          fixed !default;
 
 // Used by aether-grid/mediaqueries and aether-grid/visibility.
 // Media Query Breakpoints.
@@ -18,11 +17,23 @@ $aether-break-wide:                   1160px !default;
 $aether-break-large:                  980px !default;
 $aether-break-medium:                 768px !default;
 $aether-break-small:                  480px !default;
+$aether-break-smallest:               400px !default;
+
+// Fixed Width Layouts
+$aether-desktop-grid-width:           1148px !default; // http://gridcalculator.dk/#/1148/12/20/20
+$aether-tablet-landscape-grid-width:  968px !default; // http://gridcalculator.dk/#/968/12/20/20
+$aether-tablet-grid-width:            752px !default; // http://gridcalculator.dk/#/752/12/20/20
+$aether-handheld-landscape-grid-width:428px !default; // http://gridcalculator.dk/#/428/12/20/20
+$aether-handheld-grid-width:          308px !default; // http://gridcalculator.dk/#/308/12/20/20
 
 // Used by aether-grid/debug, aether-grid/default-layout, aether-grid/mediaquery-layout.
 // Grid overlay
 $aether-show-grid-background:         false !default;
-$grid-background-column-color:        rgba(153, 0, 0, 0.1) !default;
+$show-column-grid-backgrounds:        true !default;
+$grid-background-column-color:        hsl(0, 68%, 96%) !default;
+$show-baseline-grid-backgrounds:      true !default;
+$grid-background-baseline-color:      hsl(0, 0%, 87%) !default;
+
 // Vertical Rhythm
 $aether-base-line-height:             18px !default;
 $aether-base-font-size:               13px !default;
@@ -44,3 +55,9 @@ $aether-desktop-columns:              12 !default; // The number of columns in y
 $aether-tablet-columns:               12 !default; // The number of tablet columns in your medium grid.
 $aether-handheld-columns:             12 !default; // The number of columns in your small grid.
 $aether-gutter-width:                 20px !default; // Fixed gutters across all grids.
+
+// Float direction
+$aether-float-direction:              left !default;
+
+// Box model
+$aether-box-sizing:                   border-box !default;

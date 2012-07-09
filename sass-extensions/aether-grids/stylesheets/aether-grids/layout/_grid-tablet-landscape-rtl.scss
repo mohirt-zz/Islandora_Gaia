@@ -1,0 +1,19 @@
+@import '../base';
+
+$aether-float-direction: right;
+
+/* Tablet Landscape */
+@include respond-to(tablet-landscape) {
+
+  @include zero-classes($aether-desktop,$aether-desktop-columns);
+
+  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-tablet-landscape}", 1, $aether-tablet-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-tablet-landscape}-right", 1, $aether-tablet-columns, "")};
+
+  #{$aether_allColumns} {
+	float: $aether-float-direction;
+  }
+
+  // Generate column classes for handheld landscape media
+  @include grid-classes($aether-tablet-landscape,$aether-tablet-columns,$aether-tablet-landscape-grid-width,rtl);
+
+}
