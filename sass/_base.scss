@@ -95,9 +95,9 @@ $aether-handheld-grid-width:          308px; // http://gridcalculator.dk/#/308/1
 // Grid overlay
 $aether-show-grid-background:         false;
 $show-column-grid-backgrounds:        true;
-$grid-background-column-color:        hsl(0, 68%, 96%);
+$grid-background-column-color:        hsla(0, 68%, 96%,0.5);
 $show-baseline-grid-backgrounds:      true;
-$grid-background-baseline-color:      hsl(0, 0%, 87%);
+$grid-background-baseline-color:      hsla(0, 0%, 87%,0.5);
 
 // Vertical Rhythm
 $aether-base-line-height:             18px;

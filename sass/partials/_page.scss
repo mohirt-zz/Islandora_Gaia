@@ -2,6 +2,19 @@
  * Pages
  */
 
+.user-inner,
+.header-inner,
+.branding-inner,
+.main-menu-inner,
+.preface-inner,
+.feature-inner,
+.content-inner,
+.postscript-inner,
+.sidebar-inner,
+.footer-inner {
+  @include margin-trailer(1, $base-font-size);
+}
+
 /* Header */
 
 #header {
