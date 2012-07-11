@@ -13,6 +13,9 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
   display: inline;
   float: left;
   margin-left: 10px;
@@ -20,7 +23,6 @@ html {
 }
 
 .g-all-row {
-  width: 1128px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -38,8 +40,8 @@ html {
   min-height: 1%;
 }
 .g-all-row .g-all-row {
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -30px;
+  margin-right: -30px;
 }
 .g-all-row .g-all-row:after {
   clear: both;
@@ -56,109 +58,133 @@ html {
 }
 
 .g-d-1 {
+  padding: 0 20px;
   width: 74px;
 }
 
 .g-d-2 {
+  padding: 0 20px;
   width: 168px;
 }
 
 .g-d-3 {
+  padding: 0 20px;
   width: 262px;
 }
 
 .g-d-4 {
+  padding: 0 20px;
   width: 356px;
 }
 
 .g-d-5 {
+  padding: 0 20px;
   width: 450px;
 }
 
 .g-d-6 {
+  padding: 0 20px;
   width: 544px;
 }
 
 .g-d-7 {
+  padding: 0 20px;
   width: 638px;
 }
 
 .g-d-8 {
+  padding: 0 20px;
   width: 732px;
 }
 
 .g-d-9 {
+  padding: 0 20px;
   width: 826px;
 }
 
 .g-d-10 {
+  padding: 0 20px;
   width: 920px;
 }
 
 .g-d-11 {
+  padding: 0 20px;
   width: 1014px;
 }
 
 .g-d-12 {
+  padding: 0 20px;
   width: 1108px;
 }
 
 .g-d-right1 {
+  padding: 0 20px;
   float: right;
   width: 74px;
 }
 
 .g-d-right2 {
+  padding: 0 20px;
   float: right;
   width: 168px;
 }
 
 .g-d-right3 {
+  padding: 0 20px;
   float: right;
   width: 262px;
 }
 
 .g-d-right4 {
+  padding: 0 20px;
   float: right;
   width: 356px;
 }
 
 .g-d-right5 {
+  padding: 0 20px;
   float: right;
   width: 450px;
 }
 
 .g-d-right6 {
+  padding: 0 20px;
   float: right;
   width: 544px;
 }
 
 .g-d-right7 {
+  padding: 0 20px;
   float: right;
   width: 638px;
 }
 
 .g-d-right8 {
+  padding: 0 20px;
   float: right;
   width: 732px;
 }
 
 .g-d-right9 {
+  padding: 0 20px;
   float: right;
   width: 826px;
 }
 
 .g-d-right10 {
+  padding: 0 20px;
   float: right;
   width: 920px;
 }
 
 .g-d-right11 {
+  padding: 0 20px;
   float: right;
   width: 1014px;
 }
 
 .g-d-right12 {
+  padding: 0 20px;
   float: right;
   width: 1108px;
 }

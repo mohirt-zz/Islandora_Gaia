@@ -6,12 +6,7 @@ html {
   overflow-x:hidden;
 }
 
-//$max-limiter-width: $aether-desktop-grid-width;
 @include limiter($aether-limiter-class, $aether-desktop-grid-width, $aether-break-wide, max);
-
-//.limiter {
-//  max-width: $aether-desktop-grid-width;
-//}
 
 $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, $aether-desktop-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-right", 1, $aether-desktop-columns, "")};
 

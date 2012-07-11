@@ -1718,16 +1718,7 @@ ul li.leaf {
 }
 
 #content .content-block {
-  padding: 15px 20px 0 20px;
   margin-bottom: 1.357em;
-}
-
-.sidebar .block {
-  padding: 15px 20px 0 20px;
-}
-
-#footer .block {
-  padding: 10px 15px 10px;
 }
 
 /*
@@ -1821,6 +1812,10 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
   background-color: white;
+  border-style: solid;
+  border-width: 0.071em;
+  padding: 1.286em;
+  border-color: #ccc;
   border: 1px solid #d8d8d8;
 }
 

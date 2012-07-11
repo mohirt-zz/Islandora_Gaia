@@ -7,14 +7,5 @@
 }
 
 #content .content-block {
-  padding: 15px 20px 0 20px;
   @include margin-trailer(1);
-}
-
-.sidebar .block {
-  padding: 15px 20px 0 20px;
-}
-
-#footer .block {
-  padding: 10px 15px 10px;
 }

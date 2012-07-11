@@ -55,6 +55,7 @@ $aether-desktop-columns:              12 !default; // The number of columns in y
 $aether-tablet-columns:               12 !default; // The number of tablet columns in your medium grid.
 $aether-handheld-columns:             12 !default; // The number of columns in your small grid.
 $aether-gutter-width:                 20px !default; // Fixed gutters across all grids.
+$aether-column-padding:               0 10px !default; // Fixed column padding across all grids.
 
 // Float direction
 $aether-float-direction:              left !default;

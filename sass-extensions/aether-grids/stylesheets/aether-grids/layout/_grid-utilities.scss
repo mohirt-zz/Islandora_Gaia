@@ -29,6 +29,12 @@
         @include span-columns($n,$aether-columns,$grid-width);
       }
     }
+//    // generate row classes
+//    @for $n from 1 through $aether-columns {
+//      .g-#{$aether-media}-row#{$n} {
+//        @include row-span($n,$aether-columns,$grid-width);
+//      }
+//    }
   }
   @for $n from 1 through $aether-columns {
     .g-#{$aether-media}-right#{$n} {
@@ -67,8 +73,10 @@
   $aether-grid-width:$aether-desktop-grid-width,
   $float-direction:''
 ) {
+  $column-padding: $aether-column-padding;
   $column-width:col-width($aether-columns,$aether-grid-width);
   $span-col-px: ($n * gutter() + $n*$column-width) - gutter();
+  padding: 0 $column-padding;
   @if $float-direction == right {
     float: right;
   }
@@ -83,6 +91,30 @@
   }
 
 }
+
+@mixin row-span(
+  $n,
+  $aether-columns:$aether-desktop-columns,
+  $aether-grid-width:$aether-desktop-grid-width,
+  $float-direction:''
+) {
+  $column-width:col-width($aether-columns,$aether-grid-width);
+  $span-col-px: ($n * gutter() + $n*$column-width) + gutter(half);
+  @if $float-direction == right {
+    float: right;
+  }
+  @if $float-direction == left {
+    float: left;
+  }
+  @if $aether-grid-type == fluid {
+    width: percentage($span-col-px / ($aether-grid-width - gutter()));
+  }
+  @else {
+    width: $span-col-px;
+  }
+
+}
+
 
 @mixin offset(
   $n,
@@ -234,30 +266,13 @@
   }
 }
 
-//@function half-gutter(
-//  $gutter-width: $aether-gutter-width,
-//  $gutter-side: $aether-float-direction,
-//  $flow-direction: $aether-float-direction
-//) {
-//  $half-gutter: $gutter-width / 2;
-//  // Special handling in case gutter has an odd number of pixels.
-//  @if unit($gutter-width) == "px" {
-//    @if $gutter-side == $flow-direction {
-//      @return floor($half-gutter);
-//    }
-//    @else {
-//      @return ceil($half-gutter);
-//    }
-//  }
-//  @return $half-gutter;
-//}
-
 @mixin grid-item-base(
   $float-direction: $aether-float-direction,
   $gutter-width: gutter(),
   $box-sizing: $aether-box-sizing
 ) {
   @include box-sizing($box-sizing);
+  @include background-clip(padding-box);
   @include float($float-direction);
   margin: {
     left: gutter($aether-gutter-width, half);
@@ -269,17 +284,11 @@
   @include clearfix();
   @if $aether-context == 'nested' {
     margin: {
-      left: gutter($aether-gutter-width,half)*-1;
-      right: gutter($aether-gutter-width,half)*-1;
+      left: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
+      right: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
     }
   } 
   @else if $aether-context == 'full' {
-  @if $aether-grid-type == fluid {
-    width: percentage(($aether-grid-width - gutter()) / $aether-grid-width);
-  }
-  @else {
-    width: $aether-grid-width - gutter();
-  }
     margin: {
       left: gutter($aether-gutter-width,half)*1;
       right: gutter($aether-gutter-width,half)*1;

@@ -66,6 +66,8 @@ body {
 .sidebar .sidebar-inner {
   @include border-radius(5px);
   background-color: white;
+  @include rhythm-borders(1px, 1);
+  border-color: #ccc;
   border: 1px solid $text-border;
 }
 

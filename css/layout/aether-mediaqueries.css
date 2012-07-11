@@ -10,6 +10,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
     display: inline;
     float: left;
     margin-left: 10px;
@@ -17,7 +20,6 @@
   }
 
   .g-all-row {
-    width: 948px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -53,109 +55,133 @@
   }
 
   .g-tl-1 {
+    padding: 0 20px;
     width: 59px;
   }
 
   .g-tl-2 {
+    padding: 0 20px;
     width: 138px;
   }
 
   .g-tl-3 {
+    padding: 0 20px;
     width: 217px;
   }
 
   .g-tl-4 {
+    padding: 0 20px;
     width: 296px;
   }
 
   .g-tl-5 {
+    padding: 0 20px;
     width: 375px;
   }
 
   .g-tl-6 {
+    padding: 0 20px;
     width: 454px;
   }
 
   .g-tl-7 {
+    padding: 0 20px;
     width: 533px;
   }
 
   .g-tl-8 {
+    padding: 0 20px;
     width: 612px;
   }
 
   .g-tl-9 {
+    padding: 0 20px;
     width: 691px;
   }
 
   .g-tl-10 {
+    padding: 0 20px;
     width: 770px;
   }
 
   .g-tl-11 {
+    padding: 0 20px;
     width: 849px;
   }
 
   .g-tl-12 {
+    padding: 0 20px;
     width: 928px;
   }
 
   .g-tl-right1 {
+    padding: 0 20px;
     float: right;
     width: 59px;
   }
 
   .g-tl-right2 {
+    padding: 0 20px;
     float: right;
     width: 138px;
   }
 
   .g-tl-right3 {
+    padding: 0 20px;
     float: right;
     width: 217px;
   }
 
   .g-tl-right4 {
+    padding: 0 20px;
     float: right;
     width: 296px;
   }
 
   .g-tl-right5 {
+    padding: 0 20px;
     float: right;
     width: 375px;
   }
 
   .g-tl-right6 {
+    padding: 0 20px;
     float: right;
     width: 454px;
   }
 
   .g-tl-right7 {
+    padding: 0 20px;
     float: right;
     width: 533px;
   }
 
   .g-tl-right8 {
+    padding: 0 20px;
     float: right;
     width: 612px;
   }
 
   .g-tl-right9 {
+    padding: 0 20px;
     float: right;
     width: 691px;
   }
 
   .g-tl-right10 {
+    padding: 0 20px;
     float: right;
     width: 770px;
   }
 
   .g-tl-right11 {
+    padding: 0 20px;
     float: right;
     width: 849px;
   }
 
   .g-tl-right12 {
+    padding: 0 20px;
     float: right;
     width: 928px;
   }
@@ -319,6 +345,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
     display: inline;
     float: left;
     margin-left: 10px;
@@ -326,7 +355,6 @@
   }
 
   .g-all-row {
-    width: 732px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -362,109 +390,133 @@
   }
 
   .g-t-1 {
+    padding: 0 20px;
     width: 41px;
   }
 
   .g-t-2 {
+    padding: 0 20px;
     width: 102px;
   }
 
   .g-t-3 {
+    padding: 0 20px;
     width: 163px;
   }
 
   .g-t-4 {
+    padding: 0 20px;
     width: 224px;
   }
 
   .g-t-5 {
+    padding: 0 20px;
     width: 285px;
   }
 
   .g-t-6 {
+    padding: 0 20px;
     width: 346px;
   }
 
   .g-t-7 {
+    padding: 0 20px;
     width: 407px;
   }
 
   .g-t-8 {
+    padding: 0 20px;
     width: 468px;
   }
 
   .g-t-9 {
+    padding: 0 20px;
     width: 529px;
   }
 
   .g-t-10 {
+    padding: 0 20px;
     width: 590px;
   }
 
   .g-t-11 {
+    padding: 0 20px;
     width: 651px;
   }
 
   .g-t-12 {
+    padding: 0 20px;
     width: 712px;
   }
 
   .g-t-right1 {
+    padding: 0 20px;
     float: right;
     width: 41px;
   }
 
   .g-t-right2 {
+    padding: 0 20px;
     float: right;
     width: 102px;
   }
 
   .g-t-right3 {
+    padding: 0 20px;
     float: right;
     width: 163px;
   }
 
   .g-t-right4 {
+    padding: 0 20px;
     float: right;
     width: 224px;
   }
 
   .g-t-right5 {
+    padding: 0 20px;
     float: right;
     width: 285px;
   }
 
   .g-t-right6 {
+    padding: 0 20px;
     float: right;
     width: 346px;
   }
 
   .g-t-right7 {
+    padding: 0 20px;
     float: right;
     width: 407px;
   }
 
   .g-t-right8 {
+    padding: 0 20px;
     float: right;
     width: 468px;
   }
 
   .g-t-right9 {
+    padding: 0 20px;
     float: right;
     width: 529px;
   }
 
   .g-t-right10 {
+    padding: 0 20px;
     float: right;
     width: 590px;
   }
 
   .g-t-right11 {
+    padding: 0 20px;
     float: right;
     width: 651px;
   }
 
   .g-t-right12 {
+    padding: 0 20px;
     float: right;
     width: 712px;
   }
@@ -633,6 +685,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
     display: inline;
     float: left;
     margin-left: 10px;
@@ -640,7 +695,6 @@
   }
 
   .g-all-row {
-    width: 408px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -676,109 +730,133 @@
   }
 
   .g-hl-1 {
+    padding: 0 20px;
     width: 14px;
   }
 
   .g-hl-2 {
+    padding: 0 20px;
     width: 48px;
   }
 
   .g-hl-3 {
+    padding: 0 20px;
     width: 82px;
   }
 
   .g-hl-4 {
+    padding: 0 20px;
     width: 116px;
   }
 
   .g-hl-5 {
+    padding: 0 20px;
     width: 150px;
   }
 
   .g-hl-6 {
+    padding: 0 20px;
     width: 184px;
   }
 
   .g-hl-7 {
+    padding: 0 20px;
     width: 218px;
   }
 
   .g-hl-8 {
+    padding: 0 20px;
     width: 252px;
   }
 
   .g-hl-9 {
+    padding: 0 20px;
     width: 286px;
   }
 
   .g-hl-10 {
+    padding: 0 20px;
     width: 320px;
   }
 
   .g-hl-11 {
+    padding: 0 20px;
     width: 354px;
   }
 
   .g-hl-12 {
+    padding: 0 20px;
     width: 388px;
   }
 
   .g-hl-right1 {
+    padding: 0 20px;
     float: right;
     width: 14px;
   }
 
   .g-hl-right2 {
+    padding: 0 20px;
     float: right;
     width: 48px;
   }
 
   .g-hl-right3 {
+    padding: 0 20px;
     float: right;
     width: 82px;
   }
 
   .g-hl-right4 {
+    padding: 0 20px;
     float: right;
     width: 116px;
   }
 
   .g-hl-right5 {
+    padding: 0 20px;
     float: right;
     width: 150px;
   }
 
   .g-hl-right6 {
+    padding: 0 20px;
     float: right;
     width: 184px;
   }
 
   .g-hl-right7 {
+    padding: 0 20px;
     float: right;
     width: 218px;
   }
 
   .g-hl-right8 {
+    padding: 0 20px;
     float: right;
     width: 252px;
   }
 
   .g-hl-right9 {
+    padding: 0 20px;
     float: right;
     width: 286px;
   }
 
   .g-hl-right10 {
+    padding: 0 20px;
     float: right;
     width: 320px;
   }
 
   .g-hl-right11 {
+    padding: 0 20px;
     float: right;
     width: 354px;
   }
 
   .g-hl-right12 {
+    padding: 0 20px;
     float: right;
     width: 388px;
   }
@@ -942,6 +1020,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
     display: inline;
     float: left;
     margin-left: 10px;
@@ -949,7 +1030,6 @@
   }
 
   .g-all-row {
-    width: 288px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -985,109 +1065,133 @@
   }
 
   .g-h-1 {
+    padding: 0 20px;
     width: 4px;
   }
 
   .g-h-2 {
+    padding: 0 20px;
     width: 28px;
   }
 
   .g-h-3 {
+    padding: 0 20px;
     width: 52px;
   }
 
   .g-h-4 {
+    padding: 0 20px;
     width: 76px;
   }
 
   .g-h-5 {
+    padding: 0 20px;
     width: 100px;
   }
 
   .g-h-6 {
+    padding: 0 20px;
     width: 124px;
   }
 
   .g-h-7 {
+    padding: 0 20px;
     width: 148px;
   }
 
   .g-h-8 {
+    padding: 0 20px;
     width: 172px;
   }
 
   .g-h-9 {
+    padding: 0 20px;
     width: 196px;
   }
 
   .g-h-10 {
+    padding: 0 20px;
     width: 220px;
   }
 
   .g-h-11 {
+    padding: 0 20px;
     width: 244px;
   }
 
   .g-h-12 {
+    padding: 0 20px;
     width: 268px;
   }
 
   .g-h-right1 {
+    padding: 0 20px;
     float: right;
     width: 4px;
   }
 
   .g-h-right2 {
+    padding: 0 20px;
     float: right;
     width: 28px;
   }
 
   .g-h-right3 {
+    padding: 0 20px;
     float: right;
     width: 52px;
   }
 
   .g-h-right4 {
+    padding: 0 20px;
     float: right;
     width: 76px;
   }
 
   .g-h-right5 {
+    padding: 0 20px;
     float: right;
     width: 100px;
   }
 
   .g-h-right6 {
+    padding: 0 20px;
     float: right;
     width: 124px;
   }
 
   .g-h-right7 {
+    padding: 0 20px;
     float: right;
     width: 148px;
   }
 
   .g-h-right8 {
+    padding: 0 20px;
     float: right;
     width: 172px;
   }
 
   .g-h-right9 {
+    padding: 0 20px;
     float: right;
     width: 196px;
   }
 
   .g-h-right10 {
+    padding: 0 20px;
     float: right;
     width: 220px;
   }
 
   .g-h-right11 {
+    padding: 0 20px;
     float: right;
     width: 244px;
   }
 
   .g-h-right12 {
+    padding: 0 20px;
     float: right;
     width: 268px;
   }
