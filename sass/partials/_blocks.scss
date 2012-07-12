@@ -9,3 +9,7 @@
 #content .content-block {
   @include margin-trailer(1);
 }
+
+#footer .footer-inner {
+  @include margin-leader(1);
+}

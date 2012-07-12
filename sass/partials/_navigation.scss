@@ -22,22 +22,36 @@
 /* Primary and Secondary menus */
 
 #primary {
-  li {
-    @include horizontal-list-item(1.38462em, left);
-    &.first {
-      margin-left: 3px;
+  .grid-dis-nav & {
+    li {
+      @include horizontal-list-item(1.38462em, left);
+      &.first {
+        margin-left: 3px;
+      }
+    a {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
     }
   }
   li a {
     color: adjust-color($link-color, $lightness: -5);
-    padding: 0.5em 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   li a.active,
   li a:hover {
     @include opacity(90);
     @include pill-color($link-color-active, $link-color-hover, $link-color);
-    @include pill-size($font-size-normal, 4px, 0px, $line-height: 1.5em, $v-padding: 0.6em 1em, $h-padding: 0.5em 1em);
+    @include pill-size($font-size-normal, 4px, 0px, $line-height: 1.5em, $v-padding: 0.5em 1em, $h-padding: 0.5em 1em);
     text-decoration: none;
+  }
+  .grid-en-nav & { // If main-menu adheres to the grid, center the text
+    li {
+      a {
+        text-align: center;
+      }
+    }
   }
 }
 

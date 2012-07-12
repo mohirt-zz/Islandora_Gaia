@@ -58,10 +58,6 @@ body {
 
 }
 
-#main {
-  @include margin-trailer(1);
-}
-
 #content .content-inner,
 .sidebar .sidebar-inner {
   @include border-radius(5px);

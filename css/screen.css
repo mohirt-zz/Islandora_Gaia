@@ -1443,7 +1443,7 @@ table tr.odd {
 }
 
 /* Primary and Secondary menus */
-#primary li {
+.grid-dis-nav #primary li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -1453,21 +1453,26 @@ table tr.odd {
   padding-left: 1.385em;
   padding-right: 1.385em;
 }
-#primary li:first-child, #primary li.first {
+.grid-dis-nav #primary li:first-child, .grid-dis-nav #primary li.first {
   padding-left: 0;
 }
-#primary li:last-child {
+.grid-dis-nav #primary li:last-child {
   padding-right: 0;
 }
-#primary li.last {
+.grid-dis-nav #primary li.last {
   padding-right: 0;
 }
-#primary li.first {
+.grid-dis-nav #primary li.first {
   margin-left: 3px;
+}
+.grid-dis-nav #primary li a {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 #primary li a {
   color: #3b7887;
-  padding: 0.5em 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 #primary li a.active,
 #primary li a:hover {
@@ -1486,7 +1491,7 @@ table tr.odd {
   padding: 1.357em;
   border-right: 0;
   border-bottom: 0;
-  padding: 0.6em 1em 0.5em 1em;
+  padding: 0.5em 1em 0.5em 1em;
   text-decoration: none;
 }
 #primary li a.active:link, #primary li a.active:visited,
@@ -1517,6 +1522,9 @@ table tr.odd {
   border-color: black;
   text-shadow: #333333 1px 1px 0;
   color: white;
+}
+.grid-en-nav #primary li a {
+  text-align: center;
 }
 
 #secondary {
@@ -1721,6 +1729,10 @@ ul li.leaf {
   margin-bottom: 1.357em;
 }
 
+#footer .footer-inner {
+  margin-top: 1.357em;
+}
+
 /*
  * Pages
  */
@@ -1798,10 +1810,6 @@ body {
 .branding .site-slogan {
   font-size: 1.143em;
   line-height: 0.713em;
-}
-
-#main {
-  margin-bottom: 1.357em;
 }
 
 #content .content-inner,
