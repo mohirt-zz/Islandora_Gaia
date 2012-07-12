@@ -25,6 +25,10 @@ body {
 
 .branding {
 
+  .branding-inner { // Remove column padding in header. 
+    padding: 0;
+  }
+
   .name-and-slogan {
     @include inline-block;
     @include padding-leader(0.7, $font-size-normal);

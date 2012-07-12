@@ -1756,6 +1756,9 @@ body {
   background: url('../images/bgnoise.gif?1341847027') 0 0 repeat;
 }
 
+.branding .branding-inner {
+  padding: 0;
+}
 .branding .name-and-slogan {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
