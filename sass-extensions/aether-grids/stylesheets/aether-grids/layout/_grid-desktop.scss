@@ -22,6 +22,18 @@ $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, 
   }
 }
 
+.#{$aether-gridprefix}-all-f {
+  @include aether-clear(left)
+}
+
+.#{$aether-gridprefix}-all-l {
+  @include aether-clear(right)
+}
+
+.#{$aether-gridprefix}-all-b {
+  @include aether-clear(both)
+}
+
 // Generate column classes for desktop media
 @include grid-classes($aether-desktop,$aether-desktop-columns,$aether-desktop-grid-width);
 

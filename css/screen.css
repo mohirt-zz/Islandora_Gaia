@@ -613,6 +613,12 @@ div.messages.error {
     display: block;
   }
 }
+.no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  padding-left: 0;
+}
+
 /*
  * Forms
  */

@@ -57,6 +57,18 @@ html {
   min-height: 1%;
 }
 
+.g-all-f {
+  clear: left;
+}
+
+.g-all-l {
+  clear: right;
+}
+
+.g-all-b {
+  clear: both;
+}
+
 .g-d-1 {
   padding: 0 20px;
   width: 74px;
