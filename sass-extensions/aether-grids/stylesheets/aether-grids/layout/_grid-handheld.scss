@@ -27,4 +27,16 @@
     clear: both;
   }
 
+  .#{$aether-gridprefix}-#{$aether-handheld}-f {
+    @include aether-clear(left)
+  }
+
+  .#{$aether-gridprefix}-#{$aether-handheld}-l {
+    @include aether-clear(right)
+  }
+
+  .#{$aether-gridprefix}-#{$aether-handheld}-b {
+    @include aether-clear(both)
+  }
+
 }

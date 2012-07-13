@@ -22,15 +22,15 @@ $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, 
   }
 }
 
-.#{$aether-gridprefix}-all-f {
+.#{$aether-gridprefix}-all-f, .#{$aether-gridprefix}-d-f {
   @include aether-clear(left)
 }
 
-.#{$aether-gridprefix}-all-l {
+.#{$aether-gridprefix}-all-l, .#{$aether-gridprefix}-d-l {
   @include aether-clear(right)
 }
 
-.#{$aether-gridprefix}-all-b {
+.#{$aether-gridprefix}-all-b, .#{$aether-gridprefix}-d-b {
   @include aether-clear(both)
 }
 

@@ -13,3 +13,15 @@
 //#aside2 {
 //  @include extend-layout(d 4 right, tl 4 right, t 8, hl 12, h 12);
 //}
+
+.views-row {
+	&:nth-child(3n+4) {
+		@extend .g-d-f;
+		@extend .g-tl-f;
+		@extend .g-t-f;
+	}
+	&:nth-child(2n+3) {
+		@extend .g-hl-f;
+	}
+}
+

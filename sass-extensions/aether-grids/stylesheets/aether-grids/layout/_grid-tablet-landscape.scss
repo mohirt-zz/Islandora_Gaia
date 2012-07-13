@@ -28,5 +28,17 @@
     clear: both;
   }
 
+  .#{$aether-gridprefix}-#{$aether-tablet-landscape}-f {
+    @include aether-clear(left)
+  }
+
+  .#{$aether-gridprefix}-#{$aether-tablet-landscape}-l {
+    @include aether-clear(right)
+  }
+
+  .#{$aether-gridprefix}-#{$aether-tablet-landscape}-b {
+    @include aether-clear(both)
+  }
+
 }
 

@@ -370,7 +370,10 @@
     }
   }
 
-  .#{$aether-gridprefix}-#{$media}-#{$columns} {
+  .#{$aether-gridprefix}-#{$media}-#{$columns},
+  .#{$aether-gridprefix}-#{$media}-f,
+  .#{$aether-gridprefix}-#{$media}-l,
+  .#{$aether-gridprefix}-#{$media}-b {
     clear: none;
   }
 

@@ -33,4 +33,16 @@
     clear: both;
   }
 
+  .#{$aether-gridprefix}-#{$aether-handheld-landscape}-f {
+    @include aether-clear(left)
+  }
+
+  .#{$aether-gridprefix}-#{$aether-handheld-landscape}-l {
+    @include aether-clear(right)
+  }
+
+  .#{$aether-gridprefix}-#{$aether-handheld-landscape}-b {
+    @include aether-clear(both)
+  }
+
 }
