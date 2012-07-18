@@ -74,7 +74,7 @@ $form-disabled:                #888888;
 // Set your limiter class, this is used to limit and center the width of the page
 $aether-limiter-class:                "limiter";
 // Either use a fluid or fixed layout
-$aether-grid-type:                    fixed;
+$aether-grid-type:                    fluid;
 
 // Used by aether-grid/mediaqueries and aether-grid/visibility.
 // Media Query Breakpoints.
@@ -119,8 +119,8 @@ $aether-handheld:                     "h";
 $aether-desktop-columns:              12; // The number of columns in your large grid.
 $aether-tablet-columns:               12; // The number of tablet columns in your medium grid.
 $aether-handheld-columns:             12; // The number of columns in your small grid.
-$aether-gutter-width:                 20px; // Fixed gutters across all grids.
-$aether-column-padding:               20px; // Fixed column padding across all grids.
+$aether-gutter-width:                 20px; // Gutters across all grids.
+$aether-column-padding:               0px; // Fixed column padding across full grids.
 
 // Float direction
 $aether-float-direction:              left;

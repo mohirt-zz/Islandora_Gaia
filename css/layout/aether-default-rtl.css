@@ -3,216 +3,227 @@
 }
 
 .g-d-right1 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 74px;
+  width: 6.56%;
 }
 
 .g-d-right2 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 168px;
+  width: 14.894%;
 }
 
 .g-d-right3 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 262px;
+  width: 23.227%;
 }
 
 .g-d-right4 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 356px;
+  width: 31.56%;
 }
 
 .g-d-right5 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 450px;
+  width: 39.894%;
 }
 
 .g-d-right6 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 544px;
+  width: 48.227%;
 }
 
 .g-d-right7 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 638px;
+  width: 56.56%;
 }
 
 .g-d-right8 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 732px;
+  width: 64.894%;
 }
 
 .g-d-right9 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 826px;
+  width: 73.227%;
 }
 
 .g-d-right10 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 920px;
+  width: 81.56%;
 }
 
 .g-d-right11 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 1014px;
+  width: 89.894%;
 }
 
 .g-d-right12 {
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
-  width: 1108px;
+  width: 98.227%;
 }
 
 .g-d-o1 {
-  margin-right: 94px;
+  margin-right: 8.333%;
+  width: 100%;
 }
 
 .g-d-o2 {
-  margin-right: 188px;
+  margin-right: 16.667%;
+  width: 100%;
 }
 
 .g-d-o3 {
-  margin-right: 282px;
+  margin-right: 25%;
+  width: 100%;
 }
 
 .g-d-o4 {
-  margin-right: 376px;
+  margin-right: 33.333%;
+  width: 100%;
 }
 
 .g-d-o5 {
-  margin-right: 470px;
+  margin-right: 41.667%;
+  width: 100%;
 }
 
 .g-d-o6 {
-  margin-right: 564px;
+  margin-right: 50%;
+  width: 100%;
 }
 
 .g-d-o7 {
-  margin-right: 658px;
+  margin-right: 58.333%;
+  width: 100%;
 }
 
 .g-d-o8 {
-  margin-right: 752px;
+  margin-right: 66.667%;
+  width: 100%;
 }
 
 .g-d-o9 {
-  margin-right: 846px;
+  margin-right: 75%;
+  width: 100%;
 }
 
 .g-d-o10 {
-  margin-right: 940px;
+  margin-right: 83.333%;
+  width: 100%;
 }
 
 .g-d-o11 {
-  margin-right: 1034px;
+  margin-right: 91.667%;
+  width: 100%;
 }
 
 .g-d-push1 {
-  margin-right: 104px;
-  margin-left: -84px;
+  margin-right: 9.22%;
+  margin-left: -7.447%;
 }
 
 .g-d-push2 {
-  margin-right: 198px;
-  margin-left: -178px;
+  margin-right: 17.553%;
+  margin-left: -15.78%;
 }
 
 .g-d-push3 {
-  margin-right: 292px;
-  margin-left: -272px;
+  margin-right: 25.887%;
+  margin-left: -24.113%;
 }
 
 .g-d-push4 {
-  margin-right: 386px;
-  margin-left: -366px;
+  margin-right: 34.22%;
+  margin-left: -32.447%;
 }
 
 .g-d-push5 {
-  margin-right: 480px;
-  margin-left: -460px;
+  margin-right: 42.553%;
+  margin-left: -40.78%;
 }
 
 .g-d-push6 {
-  margin-right: 574px;
-  margin-left: -554px;
+  margin-right: 50.887%;
+  margin-left: -49.113%;
 }
 
 .g-d-push7 {
-  margin-right: 668px;
-  margin-left: -648px;
+  margin-right: 59.22%;
+  margin-left: -57.447%;
 }
 
 .g-d-push8 {
-  margin-right: 762px;
-  margin-left: -742px;
+  margin-right: 67.553%;
+  margin-left: -65.78%;
 }
 
 .g-d-push9 {
-  margin-right: 856px;
-  margin-left: -836px;
+  margin-right: 75.887%;
+  margin-left: -74.113%;
 }
 
 .g-d-push10 {
-  margin-right: 950px;
-  margin-left: -930px;
+  margin-right: 84.22%;
+  margin-left: -82.447%;
 }
 
 .g-d-push11 {
-  margin-right: 1044px;
-  margin-left: -1024px;
+  margin-right: 92.553%;
+  margin-left: -90.78%;
 }
 
 .g-d-pull1 {
-  margin-right: -84px;
+  margin-right: -7.447%;
 }
 
 .g-d-pull2 {
-  margin-right: -178px;
+  margin-right: -15.78%;
 }
 
 .g-d-pull3 {
-  margin-right: -272px;
+  margin-right: -24.113%;
 }
 
 .g-d-pull4 {
-  margin-right: -366px;
+  margin-right: -32.447%;
 }
 
 .g-d-pull5 {
-  margin-right: -460px;
+  margin-right: -40.78%;
 }
 
 .g-d-pull6 {
-  margin-right: -554px;
+  margin-right: -49.113%;
 }
 
 .g-d-pull7 {
-  margin-right: -648px;
+  margin-right: -57.447%;
 }
 
 .g-d-pull8 {
-  margin-right: -742px;
+  margin-right: -65.78%;
 }
 
 .g-d-pull9 {
-  margin-right: -836px;
+  margin-right: -74.113%;
 }
 
 .g-d-pull10 {
-  margin-right: -930px;
+  margin-right: -82.447%;
 }
 
 .g-d-pull11 {
-  margin-right: -1024px;
+  margin-right: -90.78%;
 }

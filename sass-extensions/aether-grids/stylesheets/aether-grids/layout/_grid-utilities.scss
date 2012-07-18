@@ -1,12 +1,25 @@
 @import '../base';
 @import "compass/utilities/general/float";
 
-@function col-width(
-  $aether-columns:$aether-desktop-columns,
-  $aether-grid-width:$aether-desktop-grid-width
-) {
-  $grid-width: $aether-grid-width - gutter();
-  $col-width: ($grid-width / $aether-columns) - gutter();
+//@function col-width(
+//  $aether-columns:$aether-desktop-columns,
+//  $aether-grid-width:$aether-desktop-grid-width
+//) {
+//  $grid-width: $aether-grid-width - gutter();
+//  $col-width: ($grid-width / $aether-columns) - gutter();
+//  @return $col-width;
+//}
+
+@function col-width($columns: $aether-desktop-columns,$aether-grid-width: $aether-desktop-grid-width) {
+  $col-width: floor((($aether-grid-width - (($columns - 1) * $aether-gutter-width + 2 * $aether-gutter-width)) / $columns));
+  $page-width: $col-width * $columns + (($columns - 1) * $aether-gutter-width) + (2 * $aether-gutter-width);
+    
+  @if ($col-width > 0 and $columns > 0) {
+    @if (($page-width > $aether-grid-width) or ($page-width < $aether-grid-width)) {
+      @warn "Your math is wrong, check your grid values and try again.";
+      @debug #{$aether-grid-width} minus #{$aether-gutter-width} should divide evenly with #{$columns};
+    }
+  }
   @return $col-width;
 }
 
@@ -150,29 +163,48 @@
 @mixin grid-item-base(
   $float-direction: $aether-float-direction,
   $gutter-width: gutter(),
-  $box-sizing: $aether-box-sizing
+  $box-sizing: $aether-box-sizing,
+  $aether-grid-width:$aether-desktop-grid-width
 ) {
+  $half-gutter: gutter($aether-gutter-width, half);
   @include box-sizing($box-sizing);
   @include background-clip(padding-box);
   @include float($float-direction);
   margin: {
-    left: gutter($aether-gutter-width, half);
-    right: gutter($aether-gutter-width, half);
+    @if $aether-grid-type == fluid {
+      left: percentage($half-gutter / $aether-grid-width);
+      right: percentage($half-gutter / $aether-grid-width);
+    } @else {
+      left: gutter($aether-gutter-width, half);
+      right: gutter($aether-gutter-width, half);
+    }
   }
 }
 
 @mixin container($aether-context: nested, $aether-grid-width:$aether-desktop-grid-width) {
+  $half-gutter-padding: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
+  $half-gutter: gutter($aether-gutter-width,half)*1;
   @include clearfix();
   @if $aether-context == 'nested' {
     margin: {
+    @if $aether-grid-type == fluid {
       left: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
       right: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
+    } @else {
+      left: $half-gutter-padding;
+      right: $half-gutter-padding;
+    }
     }
   } 
   @else if $aether-context == 'full' {
     margin: {
+    @if $aether-grid-type == fluid {
+      left: percentage($half-gutter / $aether-grid-width);
+      right: percentage($half-gutter / $aether-grid-width);
+    } @else {
       left: gutter($aether-gutter-width,half)*1;
       right: gutter($aether-gutter-width,half)*1;
+    }
     }
   }
 }

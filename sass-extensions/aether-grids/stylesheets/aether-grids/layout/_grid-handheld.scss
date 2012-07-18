@@ -7,7 +7,7 @@
   $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld}", 1, $aether-handheld-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld}-right", 1, $aether-handheld-columns, "")};
 
   #{$aether_allColumns} {
-    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing);
+    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-handheld-grid-width);
   }
 
   .#{$aether-gridprefix}-all-row {

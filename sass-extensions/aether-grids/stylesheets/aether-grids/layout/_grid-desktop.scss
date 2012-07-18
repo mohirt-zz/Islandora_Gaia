@@ -11,7 +11,7 @@ html {
 $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, $aether-desktop-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-right", 1, $aether-desktop-columns, "")};
 
 #{$aether_allColumns} {
-  @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing);
+  @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-desktop-grid-width);
 }
 
 .#{$aether-gridprefix}-all-row {
