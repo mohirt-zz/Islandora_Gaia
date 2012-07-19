@@ -1,5 +1,7 @@
 @import '../base';
 
+$aether-grid-type: $aether-grid-type-tablet;
+
 /*  Tablet Portrait */
 @include respond-to(tablet)  {
   @include limiter($aether-limiter-class, $aether-tablet-grid-width, $aether-break-medium);

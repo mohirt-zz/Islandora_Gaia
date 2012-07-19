@@ -1,5 +1,7 @@
 @import '../base';
 
+$aether-grid-type: $aether-grid-type-handheld-landscape;
+
 /* Handheld Landscape */
 @include respond-to(handheld-landscape) {
   // Disables iphone font size increase when viewing in landscape mode.

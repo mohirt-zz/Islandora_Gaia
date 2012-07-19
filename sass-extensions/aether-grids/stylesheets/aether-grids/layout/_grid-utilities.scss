@@ -1,15 +1,6 @@
 @import '../base';
 @import "compass/utilities/general/float";
 
-//@function col-width(
-//  $aether-columns:$aether-desktop-columns,
-//  $aether-grid-width:$aether-desktop-grid-width
-//) {
-//  $grid-width: $aether-grid-width - gutter();
-//  $col-width: ($grid-width / $aether-columns) - gutter();
-//  @return $col-width;
-//}
-
 @function col-width($columns: $aether-desktop-columns,$aether-grid-width: $aether-desktop-grid-width) {
   $col-width: floor((($aether-grid-width - (($columns - 1) * $aether-gutter-width + 2 * $aether-gutter-width)) / $columns));
   $page-width: $col-width * $columns + (($columns - 1) * $aether-gutter-width) + (2 * $aether-gutter-width);

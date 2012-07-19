@@ -49,7 +49,7 @@
   border-bottom: 1px solid $text-border;
   .submitted { 
     @include margin-leader(0, $font-size-normal);
-    @include margin-trailer(0, $font-size-normal);
+    @include margin-trailer(1, $font-size-normal);
   }
   h2 {
     @include margin-trailer(0, $font-size-normal);

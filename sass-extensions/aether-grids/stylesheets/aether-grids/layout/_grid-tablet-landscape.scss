@@ -1,5 +1,7 @@
 @import '../base';
 
+$aether-grid-type: $aether-grid-type-tablet-landscape;
+
 /* Tablet Landscape */
 @include respond-to(tablet-landscape) {
 

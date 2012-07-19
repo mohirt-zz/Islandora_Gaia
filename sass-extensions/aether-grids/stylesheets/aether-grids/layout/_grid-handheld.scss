@@ -1,5 +1,7 @@
 @import '../base';
 
+$aether-grid-type: $aether-grid-type-handheld;
+
 /* Handheld Portrait */
 @include respond-to(handheld) {
   @include limiter($aether-limiter-class, $aether-handheld-grid-width, $aether-break-smallest, min);

@@ -71,10 +71,16 @@ $form-border-2:                adjust-lightness($form-border-1, 10);
 $form-border-3:                adjust-lightness($form-border-1, 10);
 $form-disabled:                #888888;
 
-// Set your limiter class, this is used to limit and center the width of the page
-$aether-limiter-class:                "limiter";
+// This is used to limit and center the width of the page
+// Uncomment to override default class if you modified page.tpl.php
+// $aether-limiter-class:                "limiter";
+
 // Either use a fluid or fixed layout
-$aether-grid-type:                    fluid;
+$aether-grid-type-desktop:            fluid;
+$aether-grid-type-tablet-landscape:   fluid;
+$aether-grid-type-tablet:             fluid;
+$aether-grid-type-handheld-landscape: fluid;
+$aether-grid-type-handheld:           fluid;
 
 // Used by aether-grid/mediaqueries and aether-grid/visibility.
 // Media Query Breakpoints.

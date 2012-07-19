@@ -1,6 +1,8 @@
 @import '../base';
 @import "compass/utilities/general/float";
 
+$aether-grid-type: $aether-grid-type-desktop;
+
 html { 
   overflow:auto; 
   overflow-x:hidden;
