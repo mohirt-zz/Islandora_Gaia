@@ -215,3 +215,19 @@ $legacy-support-for-ie7: true !default;
     height: $footer-height;
   }
 }
+
+// Add percentage of white to a color
+//
+// $color - Any color value (ex. #222 or red).
+// $percent - A percentage value (ex. 40%)
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+//
+// $color - Any color value (ex. #0000FF or blue).
+// $percent - A percentage value (ex. 40%)
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
