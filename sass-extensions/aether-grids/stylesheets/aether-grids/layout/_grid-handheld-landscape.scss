@@ -1,6 +1,9 @@
 @import '../base';
 
 $aether-grid-type: $aether-grid-type-handheld-landscape;
+$aether-columns: $aether-columns-handheld;
+$aether-grid-width: $aether-grid-width-handheld-landscape;
+$aether-media: $aether-media-handheld-landscape;
 
 /* Handheld Landscape */
 @include respond-to(handheld-landscape) {
@@ -10,41 +13,25 @@ $aether-grid-type: $aether-grid-type-handheld-landscape;
     -webkit-text-size-adjust: none;
   }
 
-  @include limiter($aether-limiter-class, $aether-handheld-landscape-grid-width, $aether-break-small);
+  @include limiter($aether-limiter-class, $aether-grid-width, $aether-break-small);
 
-  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld-landscape}", 1, $aether-handheld-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld-landscape}-right", 1, $aether-handheld-columns, "")};
+  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
 
   #{$aether_allColumns} {
-    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-handheld-landscape-grid-width);
+    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-grid-width);
   }
 
   .#{$aether-gridprefix}-all-row {
-    @include container(full,$aether-handheld-landscape-grid-width);
-    @include aether-grid-background($aether-handheld-columns, $aether-handheld-landscape-grid-width);
+    @include container(full);
+    @include aether-grid-background;
   }
   
   // Zero out desktop push/pull/offset to avoid specificity problems 
   // in the media class stack when moving things like sidebars around.
   // This must come before column classes.
-  @include zero-classes($aether-desktop,$aether-desktop-columns);
+  @include zero-classes($aether-media-desktop,$aether-columns-desktop);
 
   // Generate column classes for handheld landscape media
-  @include grid-classes($aether-handheld-landscape,$aether-handheld-columns,$aether-handheld-landscape-grid-width);
-
-  .#{$aether-gridprefix}-#{$aether-handheld-landscape}-#{$aether-handheld-columns} {
-    clear: both;
-  }
-
-  .#{$aether-gridprefix}-#{$aether-handheld-landscape}-f {
-    @include aether-clear(left)
-  }
-
-  .#{$aether-gridprefix}-#{$aether-handheld-landscape}-l {
-    @include aether-clear(right)
-  }
-
-  .#{$aether-gridprefix}-#{$aether-handheld-landscape}-b {
-    @include aether-clear(both)
-  }
+  @include grid-classes(ltr);
 
 }

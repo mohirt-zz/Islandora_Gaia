@@ -8,29 +8,29 @@ $aether-show-grid-background: true;
 
 // Desktop
 .#{$aether-gridprefix}-all-row {
-  @include aether-grid-background($aether-desktop-columns, $aether-desktop-grid-width);
+  @include aether-grid-background($aether-columns-desktop, $aether-grid-width-desktop);
 }
 // Handheld
 @include respond-to(handheld) {
   .#{$aether-gridprefix}-all-row {
-    @include aether-grid-background($aether-handheld-columns, $aether-handheld-grid-width);
+    @include aether-grid-background($aether-columns-handheld, $aether-grid-width-handheld);
   }
 }
 // Handheld-Landscape
 @include respond-to(handheld-landscape) {
   .#{$aether-gridprefix}-all-row {
-    @include aether-grid-background($aether-handheld-columns, $aether-handheld-landscape-grid-width);
+    @include aether-grid-background($aether-columns-handheld, $aether-grid-width-handheld-landscape);
   }
 }
 // Tablet
 @include respond-to(tablet)  {
   .#{$aether-gridprefix}-all-row {
-    @include aether-grid-background($aether-tablet-columns, $aether-tablet-grid-width);
+    @include aether-grid-background($aether-columns-tablet, $aether-grid-width-tablet);
   }
 }
 // Tablet-Landscape
 @include respond-to(tablet-landscape) {
   .#{$aether-gridprefix}-all-row {
-    @include aether-grid-background($aether-tablet-columns, $aether-tablet-landscape-grid-width);
+    @include aether-grid-background($aether-columns-tablet, $aether-grid-width-tablet-landscape);
   }
 }

@@ -1,44 +1,31 @@
 @import '../base';
 
 $aether-grid-type: $aether-grid-type-tablet;
+$aether-columns: $aether-columns-tablet;
+$aether-grid-width: $aether-grid-width-tablet;
+$aether-media: $aether-media-tablet;
 
 /*  Tablet Portrait */
 @include respond-to(tablet)  {
-  @include limiter($aether-limiter-class, $aether-tablet-grid-width, $aether-break-medium);
+  @include limiter($aether-limiter-class, $aether-grid-width, $aether-break-medium);
 
-  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-tablet}", 1, $aether-tablet-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-tablet}-right", 1, $aether-tablet-columns, "")};
+  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
 
   #{$aether_allColumns} {
-    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-tablet-grid-width);
+    @include grid-item-base;
   }
 
   .#{$aether-gridprefix}-all-row {
-    @include container(full,$aether-tablet-grid-width);
-    @include aether-grid-background($aether-tablet-columns, $aether-tablet-grid-width);
+    @include container(full);
+    @include aether-grid-background;
   }
 
   // Zero out desktop push/pull/offset to avoid specificity problems 
   // in the media class stack when moving things like sidebars around.
   // This must come before column classes.
-  @include zero-classes($aether-desktop,$aether-desktop-columns);
+  @include zero-classes($aether-media-desktop,$aether-columns-desktop);
 
   // Generate column classes for tablet media
-  @include grid-classes($aether-tablet,$aether-tablet-columns,$aether-tablet-grid-width);
-
-  .#{$aether-gridprefix}-#{$aether-tablet}-#{$aether-tablet-columns} {
-    clear: both;
-  }
-
-  .#{$aether-gridprefix}-#{$aether-tablet}-f {
-    @include aether-clear(left)
-  }
-
-  .#{$aether-gridprefix}-#{$aether-tablet}-l {
-    @include aether-clear(right)
-  }
-
-  .#{$aether-gridprefix}-#{$aether-tablet}-b {
-    @include aether-clear(both)
-  }
+  @include grid-classes(ltr);
 
 }

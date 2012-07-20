@@ -1,14 +1,20 @@
 @import '../base';
 @import "compass/utilities/general/float";
 
-@function col-width($columns: $aether-desktop-columns,$aether-grid-width: $aether-desktop-grid-width) {
-  $col-width: floor((($aether-grid-width - (($columns - 1) * $aether-gutter-width + 2 * $aether-gutter-width)) / $columns));
+$aether-grid-type: fixed !default;
+$aether-columns: 12 !default;
+$aether-grid-width: 1148px !default;
+$aether-gutter-width: 20px !default;
+$aether-media: "d" !default;
+
+@function col-width($columns: $aether-columns, $grid-width: $aether-grid-width) {
+  $col-width: floor((($grid-width - (($columns - 1) * $aether-gutter-width + 2 * $aether-gutter-width)) / $columns));
   $page-width: $col-width * $columns + (($columns - 1) * $aether-gutter-width) + (2 * $aether-gutter-width);
     
   @if ($col-width > 0 and $columns > 0) {
-    @if (($page-width > $aether-grid-width) or ($page-width < $aether-grid-width)) {
+    @if (($page-width > $grid-width) or ($page-width < $grid-width)) {
       @warn "Your math is wrong, check your grid values and try again.";
-      @debug #{$aether-grid-width} minus #{$aether-gutter-width} should divide evenly with #{$columns};
+      @debug #{$grid-width} minus #{$aether-gutter-width} should divide evenly with #{$columns};
     }
   }
   @return $col-width;
@@ -16,15 +22,13 @@
 
 @mixin span-columns(
   $n,
-  $aether-columns:$aether-desktop-columns,
-  $aether-grid-width:$aether-desktop-grid-width,
+  $columns: $aether-columns,
+  $grid-width:$aether-grid-width,
   $float-direction:''
 ) {
-  $grid-width: $aether-grid-width - gutter();
-  $column-padding: $aether-column-padding;
-  $column-width: col-width($aether-columns,$aether-grid-width);
+  $column-width: col-width($columns,$grid-width);
+  $grid-width: $grid-width - gutter();
   $span-col-px: ($n * gutter() + $n * $column-width) - gutter();
-  padding: 0 $column-padding;
   @if $float-direction == right {
     float: right;
   }
@@ -42,11 +46,11 @@
 
 @mixin offset(
   $n,
-  $aether-columns:$aether-desktop-columns,
-  $aether-grid-width:$aether-desktop-grid-width
+  $columns: $aether-columns,
+  $grid-width:$aether-grid-width
 ) {
-  $grid-width: $aether-grid-width - gutter();
-  $column-width: col-width($aether-columns,$aether-grid-width);
+  $column-width: col-width($columns,$grid-width);
+  $grid-width: $grid-width - gutter();
   $offset-left-px: $n * gutter() + $n * $column-width;
   @if $aether-grid-type == fluid {
     margin: {
@@ -73,11 +77,11 @@
 
 @mixin push(
   $n,
-  $aether-columns:$aether-desktop-columns,
-  $aether-grid-width:$aether-desktop-grid-width
+  $columns: $aether-columns,
+  $grid-width:$aether-grid-width
 ) {
-  $grid-width: $aether-grid-width - gutter();
-  $column-width:col-width($aether-columns,$aether-grid-width);
+  $column-width:col-width($columns,$grid-width);
+  $grid-width: $grid-width - gutter();
   $push-left-px: ($n * gutter() + $n * $column-width) + gutter($aether-gutter-width, half);
   $push-right-px: (-$n * gutter() - $n * $column-width) + gutter($aether-gutter-width, half);
   @if $aether-grid-type == fluid {
@@ -108,11 +112,11 @@
 
 @mixin pull(
   $n,
-  $aether-columns:$aether-desktop-columns,
-  $aether-grid-width:$aether-desktop-grid-width
+  $columns: $aether-columns,
+  $grid-width:$aether-grid-width
 ) {
-  $grid-width: $aether-grid-width - gutter();
-  $column-width: col-width($aether-columns,$aether-grid-width);
+  $column-width: col-width($aether-columns,$grid-width);
+  $grid-width: $grid-width - gutter();
   $pull-left-px: (-$n * gutter() - $n * $column-width) + gutter($aether-gutter-width, half);
   @if $aether-grid-type == fluid {
     margin: {
@@ -155,16 +159,19 @@
   $float-direction: $aether-float-direction,
   $gutter-width: gutter(),
   $box-sizing: $aether-box-sizing,
-  $aether-grid-width:$aether-desktop-grid-width
+  $grid-width: $aether-grid-width
 ) {
+  @if $aether-column-padding-v > 0 and $aether-column-padding-h > 0 {
+    padding: $aether-column-padding-v $aether-column-padding-h;
+  }
   $half-gutter: gutter($aether-gutter-width, half);
   @include box-sizing($box-sizing);
   @include background-clip(padding-box);
   @include float($float-direction);
   margin: {
     @if $aether-grid-type == fluid {
-      left: percentage($half-gutter / $aether-grid-width);
-      right: percentage($half-gutter / $aether-grid-width);
+      left: percentage($half-gutter / $grid-width);
+      right: percentage($half-gutter / $grid-width);
     } @else {
       left: gutter($aether-gutter-width, half);
       right: gutter($aether-gutter-width, half);
@@ -172,15 +179,15 @@
   }
 }
 
-@mixin container($aether-context: nested, $aether-grid-width:$aether-desktop-grid-width) {
-  $half-gutter-padding: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
+@mixin container($aether-context: nested, $grid-width:$aether-grid-width) {
+  $half-gutter-padding: (gutter($aether-gutter-width,half) + $aether-column-padding-h)*-1;
   $half-gutter: gutter($aether-gutter-width,half)*1;
   @include clearfix();
   @if $aether-context == 'nested' {
     margin: {
     @if $aether-grid-type == fluid {
-      left: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
-      right: (gutter($aether-gutter-width,half) + $aether-column-padding)*-1;
+      left: (gutter($aether-gutter-width,half) + $aether-column-padding-h)*-1;
+      right: (gutter($aether-gutter-width,half) + $aether-column-padding-h)*-1;
     } @else {
       left: $half-gutter-padding;
       right: $half-gutter-padding;
@@ -190,8 +197,8 @@
   @else if $aether-context == 'full' {
     margin: {
     @if $aether-grid-type == fluid {
-      left: percentage($half-gutter / $aether-grid-width);
-      right: percentage($half-gutter / $aether-grid-width);
+      left: percentage($half-gutter / $grid-width);
+      right: percentage($half-gutter / $grid-width);
     } @else {
       left: gutter($aether-gutter-width,half)*1;
       right: gutter($aether-gutter-width,half)*1;
@@ -201,19 +208,19 @@
 }
 
 @mixin limiter(
-  $aether-limiter: $aether-limiter-class,
-  $aether-target: $aether-desktop-grid-width,
-  $aether-context: $aether-break-wide,
+  $limiter: $aether-limiter-class,
+  $target: $aether-grid-width,
+  $context: $aether-break-wide,
   $constraint: false
 ) {
-  .#{$aether-limiter-class} {
+  .#{$limiter} {
     margin-left: auto;
     margin-right: auto;
     @if $aether-grid-type == fluid {
       @if $constraint {
-        #{$constraint}-width: $aether-target;
+        #{$constraint}-width: $target;
       }
-      $target: percentage($aether-target / $aether-context);
+      $target: percentage($target / $context);
       @if $target > 100% {
         width: 100%;
       }
@@ -222,13 +229,13 @@
       }
     }
     @else {
-      width: $aether-target;
+      width: $target;
     }
   }
 }
 
 @mixin extend-layout(
-  $extend-layout-1: $aether-desktop $aether-desktop-columns,
+  $extend-layout-1: $aether-media $aether-columns,
   $extend-layout-2: false,
   $extend-layout-3: false,
   $extend-layout-4: false,
@@ -258,7 +265,12 @@
       $media: nth($layout, 1);
       $columns: nth($layout, 2);
       $function: nth($layout, 3);
-      @extend .#{$aether-gridprefix}-#{$media}-#{$function}#{$columns};
+      @if $function == right {
+        @extend .#{$aether-gridprefix}-#{$media}-#{$columns};
+        @extend .#{$aether-gridprefix}-#{$media}-right;
+      } @else {
+        @extend .#{$aether-gridprefix}-#{$media}-#{$function}#{$columns};
+      }
     }
   }
 }
@@ -269,7 +281,7 @@
 //
 // A wrapper for the compass "grid-background" mixin.
 // Note: Sub-pixel rounding can lead to several pixels of variation between browsers.
-@mixin aether-grid-background($columns:$aether-desktop-columns, $grid-width: $aether-desktop-grid-width) {
+@mixin aether-grid-background($columns: $aether-columns, $grid-width: $aether-grid-width) {
   @if $aether-show-grid-background {
     $col-width: col-width($columns,$grid-width);
     $gutter-width: gutter();
@@ -288,48 +300,119 @@
 }
 
 @mixin grid-classes(
-  $aether-media:$aether-desktop,
-  $aether-columns:$aether-desktop-columns,
-  $aether-grid-width:$aether-desktop-grid-width,
-  $rtl:''
+  $rtl: ltr,
+  $default: false,
+  $aether-media:$aether-media,
+  $columns:$aether-columns,
+  $grid-width:$aether-grid-width
 ) {
-  @if $rtl == '' {
-    // generate column classes
-    @for $n from 1 through $aether-columns {
+  @if $rtl == ltr { // If rtl these classes aren't included.
+    // Generate column classes.
+    @for $n from 1 through $columns {
       .g-#{$aether-media}-#{$n} {
-        @include span-columns($n,$aether-columns,$aether-grid-width);
+        @include span-columns($n,$aether-columns,$grid-width);
       }
     }
-  }
-  @for $n from 1 through $aether-columns {
-    .g-#{$aether-media}-right#{$n} {
-      @if $aether-float-direction == right {
-        @include span-columns($n,$aether-columns,$aether-grid-width,left);
-      } @else {
-        @include span-columns($n,$aether-columns,$aether-grid-width,right);
-      }
+
+    .#{$aether-gridprefix}-#{$aether-media}-center {
+      margin-left: auto;
+      margin-right: auto;
+      @include reset-float();
     }
+
+    .#{$aether-gridprefix}-#{$aether-media}-center-text {
+      text-align: center;
+      @include reset-float();
+    }
+
+    .#{$aether-gridprefix}-#{$aether-media}-#{$aether-columns} {
+      clear: both;
+    }
+
+    .#{$aether-gridprefix}-#{$aether-media}-clear {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-#{$aether-columns};
+    }
+
   }
+
   // generate offset classes
-  @for $n from 1 through ($aether-columns - 1) {
+  @for $n from 1 through ($columns - 1) {
     .g-#{$aether-media}-#{$aether-offset_prefix}#{$n} {
-      @include offset($n,$aether-columns,$aether-grid-width);
+      @include offset($n,$aether-columns,$grid-width);
     }
   }
 
   // generate push classes
-  @for $n from 1 through ($aether-columns - 1) {
+  @for $n from 1 through ($columns - 1) {
     .g-#{$aether-media}-#{$aether-push_prefix}#{$n} {
-      @include push($n,$aether-columns,$aether-grid-width);
+      @include push($n,$aether-columns,$grid-width);
     }
   }
 
   // generate pull classes
-  @for $n from 1 through ($aether-columns - 1) {
+  @for $n from 1 through ($columns - 1) {
     .g-#{$aether-media}-#{$aether-pull_prefix}#{$n} {
-      @include pull($n,$aether-columns,$aether-grid-width);
+      @include pull($n,$aether-columns,$grid-width);
     }
   }
+
+  .#{$aether-gridprefix}-#{$aether-media}-right {
+    // Determine the float direction.
+    $dir: right;
+    @if $aether-float-direction == right {
+      $dir: aether-reverse-dir($dir);
+    }
+    @include float($dir);
+  }
+
+  .#{$aether-gridprefix}-#{$aether-media}-left {
+    // Determine the float direction.
+    $dir: left;
+    @if $aether-float-direction == right {
+      $dir: aether-reverse-dir($dir);
+    }
+    @include float($dir);
+  }
+
+  .#{$aether-gridprefix}-#{$aether-media}-f {
+    @include aether-clear(left);
+  }
+
+  .#{$aether-gridprefix}-#{$aether-media}-l {
+    @include aether-clear(right);
+  }
+
+  @if $default == default {
+    .#{$aether-gridprefix}-all-f {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-f;
+    }
+
+    .#{$aether-gridprefix}-all-l {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-l;
+    }
+
+    .#{$aether-gridprefix}-all-clear {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-b;
+    }
+
+    .#{$aether-gridprefix}-all-right {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-right;
+    }
+
+    .#{$aether-gridprefix}-all-left {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-right;
+    }
+
+    .#{$aether-gridprefix}-all-center {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-center;
+    }
+
+    .#{$aether-gridprefix}-all-center-text {
+      @extend .#{$aether-gridprefix}-#{$aether-media}-center-text;
+    }
+
+  }
+
 }
 
 // Aether's method of clearing, it is used for first/last classes.
@@ -362,7 +445,7 @@
 // Zero out desktop push/pull/offset to avoid specificity problems 
 // in the media class stack when moving things like sidebars around.
 // This must come before column classes.
-@mixin zero-classes($media:$aether-desktop,$columns:$aether-desktop-columns) {
+@mixin zero-classes($media:$aether-media,$columns: $aether-columns) {
 
   #{enumerate(".#{$aether-gridprefix}-#{$media}-#{$aether-offset_prefix}", 1, $columns, "")} {
     margin: {

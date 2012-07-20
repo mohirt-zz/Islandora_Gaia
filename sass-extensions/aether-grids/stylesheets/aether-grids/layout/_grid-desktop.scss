@@ -1,45 +1,30 @@
 @import '../base';
-@import "compass/utilities/general/float";
 
 $aether-grid-type: $aether-grid-type-desktop;
+$aether-columns: $aether-columns-desktop;
+$aether-grid-width: $aether-grid-width-desktop;
+$aether-media: $aether-media-desktop;
 
 html { 
   overflow:auto; 
   overflow-x:hidden;
 }
 
-@include limiter($aether-limiter-class, $aether-desktop-grid-width, $aether-break-wide, max);
+@include limiter($aether-limiter-class, $aether-grid-width, $aether-break-wide, max);
 
-$aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, $aether-desktop-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-right", 1, $aether-desktop-columns, "")};
+$aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
 
 #{$aether_allColumns} {
-  @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-desktop-grid-width);
+  @include grid-item-base;
 }
 
 .#{$aether-gridprefix}-all-row {
-  @include container(full,$aether-desktop-grid-width);
-  @include aether-grid-background($aether-desktop-columns, $aether-desktop-grid-width);
+  @include container(full);
+  @include aether-grid-background;
   .#{$aether-gridprefix}-all-row {
     @include container(nested);
   }
 }
 
-.#{$aether-gridprefix}-all-f, .#{$aether-gridprefix}-d-f {
-  @include aether-clear(left)
-}
-
-.#{$aether-gridprefix}-all-l, .#{$aether-gridprefix}-d-l {
-  @include aether-clear(right)
-}
-
-.#{$aether-gridprefix}-all-b, .#{$aether-gridprefix}-d-b {
-  @include aether-clear(both)
-}
-
 // Generate column classes for desktop media
-@include grid-classes($aether-desktop,$aether-desktop-columns,$aether-desktop-grid-width);
-
-// Clear full width classes
-.#{$aether-gridprefix}-#{$aether-desktop}-#{$aether-desktop-columns} {
-  clear: both;
-}
+@include grid-classes(ltr, default);

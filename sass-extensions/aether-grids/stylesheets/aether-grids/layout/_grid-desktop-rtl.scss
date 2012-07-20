@@ -1,12 +1,16 @@
 @import '../base';
 
 $aether-float-direction: right;
+$aether-grid-type: $aether-grid-type-desktop;
+$aether-columns: $aether-columns-desktop;
+$aether-grid-width: $aether-grid-width-desktop;
+$aether-media: $aether-media-desktop;
 
-$aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}", 1, $aether-desktop-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-desktop}-right", 1, $aether-desktop-columns, "")};
+$aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
 
 #{$aether_allColumns} {
   float: $aether-float-direction;
 }
 
 // Generate column classes for desktop media
-@include grid-classes($aether-desktop,$aether-desktop-columns,$aether-desktop-grid-width,rtl);
+@include grid-classes(rtl);

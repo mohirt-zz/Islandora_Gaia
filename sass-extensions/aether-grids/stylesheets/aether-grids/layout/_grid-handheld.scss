@@ -1,44 +1,31 @@
 @import '../base';
 
 $aether-grid-type: $aether-grid-type-handheld;
+$aether-columns: $aether-columns-handheld;
+$aether-grid-width: $aether-grid-width-handheld;
+$aether-media: $aether-media-handheld;
 
 /* Handheld Portrait */
 @include respond-to(handheld) {
-  @include limiter($aether-limiter-class, $aether-handheld-grid-width, $aether-break-smallest, min);
+  @include limiter($aether-limiter-class, $aether-grid-width, $aether-break-smallest, min);
 
-  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld}", 1, $aether-handheld-columns)}, #{enumerate(".#{$aether-gridprefix}-#{$aether-handheld}-right", 1, $aether-handheld-columns, "")};
+  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
 
   #{$aether_allColumns} {
-    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-handheld-grid-width);
+    @include grid-item-base;
   }
 
   .#{$aether-gridprefix}-all-row {
-    @include container(full,$aether-handheld-grid-width);
-    @include aether-grid-background($aether-handheld-columns, $aether-handheld-grid-width);
+    @include container(full);
+    @include aether-grid-background;
   }
 
   // Zero out desktop push/pull/offset to avoid specificity problems 
   // in the media class stack when moving things like sidebars around.
   // This must come before column classes.
-  @include zero-classes($aether-desktop,$aether-desktop-columns);
+  @include zero-classes($aether-media-desktop,$aether-columns-desktop);
 
   // Generate column classes for handheld media
-  @include grid-classes($aether-handheld,$aether-handheld-columns,$aether-handheld-grid-width);
-
-  .#{$aether-gridprefix}-#{$aether-handheld}-#{$aether-handheld-columns} {
-    clear: both;
-  }
-
-  .#{$aether-gridprefix}-#{$aether-handheld}-f {
-    @include aether-clear(left)
-  }
-
-  .#{$aether-gridprefix}-#{$aether-handheld}-l {
-    @include aether-clear(right)
-  }
-
-  .#{$aether-gridprefix}-#{$aether-handheld}-b {
-    @include aether-clear(both)
-  }
+  @include grid-classes(ltr);
 
 }
