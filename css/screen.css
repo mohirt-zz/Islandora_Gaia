@@ -455,6 +455,12 @@ address {
   padding-left: 0;
 }
 
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /*
  * Forms
  */
