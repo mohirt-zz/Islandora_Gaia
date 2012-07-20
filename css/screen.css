@@ -448,6 +448,7 @@ address {
 
 /*
  * Patterns
+ * Use the pattern classes here as extends in other stylesheets.
  */
 .no-bullets {
   list-style-image: none;
@@ -458,6 +459,8 @@ address {
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 

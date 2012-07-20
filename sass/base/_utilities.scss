@@ -11,7 +11,9 @@ $legacy-support-for-ie6: true !default;
 $legacy-support-for-ie7: true !default;
 
 
-// clearfix as defined by Drupal
+// Clears floats without markup.
+//
+// Takes no arguments.
 @mixin clearfix {
   &:after {
     clear: both;
@@ -35,6 +37,8 @@ $legacy-support-for-ie7: true !default;
 }
 
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+//
+// Takes no arguments.
 @mixin element-invisible {
   height: 1px;
   overflow: hidden;
@@ -46,6 +50,9 @@ $legacy-support-for-ie7: true !default;
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+// Allows element to be focusable when navigated to via the keyboard.
+//
+// Takes no arguments.
 @mixin element-focusable {
   @include element-invisible;
 
@@ -60,6 +67,8 @@ $legacy-support-for-ie7: true !default;
 }
 
 // The word "Unpublished" displayed underneath unpublished nodes and comments.
+//
+// Takes no arguments.
 @mixin unpublished-div {
   color: #d8d8d8;
   font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
@@ -79,6 +88,8 @@ $legacy-support-for-ie7: true !default;
 }
 
 // Center-align a block level element
+//
+// Takes no arguments.
 @mixin center-block {
   display: block;
   margin-left: auto;
@@ -86,6 +97,8 @@ $legacy-support-for-ie7: true !default;
 }
 
 // Opacity
+//
+// $opacity - An opacity value from 0 (invisible) to 100 (opaque).
 @mixin opacity($opacity: 100) {
   filter: alpha(opacity=$opacity);
          opacity: $opacity / 100;
@@ -94,14 +107,36 @@ $legacy-support-for-ie7: true !default;
 }
 
 // Turn off bullets for an element of a list
+//
+// Takes no arguments.
 @mixin no-bullet {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
 }
 
+// Turn off bullets for an entire list
+//
+// Takes no arguments.
+@mixin no-bullets {
+  list-style-image: none;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// Avoid overflowing text by adding an elipsis.
+//
+// Takes no arguments.
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  @include experimental(text-overflow, ellipsis, not -moz, not -webkit, -o, -ms, not -khtml, official);
+}
+
 // Hide for both screenreaders and browsers
 // css-discuss.incutio.com/wiki/Screenreader_Visibility
+//
+// Takes no arguments.
 @mixin hide-from-all {
   display:none;
   visibility:hidden;
@@ -110,6 +145,8 @@ $legacy-support-for-ie7: true !default;
 // Hide only visually, but have it available for screenreaders
 // www.webaim.org/techniques/css/invisiblecontent/
 // Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal!
+//
+// Takes no arguments.
 @mixin screenreaders-only {
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
@@ -117,11 +154,18 @@ $legacy-support-for-ie7: true !default;
 }
 
 // Hide visually and from screenreaders, but maintain layout
+//
+// Takes no arguments.
 @mixin invisible {
   visibility: hidden;
 }
 
-// @font-face
+// Adds a custom web font to the page, you must have the font files in css/fonts.
+//
+// $family - The font family name of the font.
+// $file - The actual filename of the font, not including the extension.
+//
+// Compatibility untested.
 @mixin font-face-family($family, $file) {
   @font-face {
     font-family: '#{$family}'; font-style: normal;
@@ -135,7 +179,20 @@ $legacy-support-for-ie7: true !default;
   }
 }
 
-@mixin sticky-footer($footer-height, $root-selector: unquote("#page"), $root-footer-selector: unquote("#page_footer"), $footer-selector: unquote("#footer")) {
+// Makes the footer stick to the bottom of the page, footer must have fixed height.
+//
+// $footer-height - The static height of the footer.
+// $root-selector - The wrapper class (footer must be just outside this element).
+// $root-footer-selector - A specially added class in an element just before the end of the wrapper.
+// $footer-selector - The class of your footer.
+//
+// Compatibility untested.
+@mixin sticky-footer(
+  $footer-height,
+  $root-selector: unquote("#page"),
+  $root-footer-selector: unquote("#page_footer"),
+  $footer-selector: unquote("#footer")
+  ) {
   html, body {
     height: 100% !important;
   }

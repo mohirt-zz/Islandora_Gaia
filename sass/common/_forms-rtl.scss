@@ -2,14 +2,14 @@
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin-left: 3px; // RTL
+  margin-left: 3px;
 }
 
 button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"] {
-  margin-left: 3px;  // RTL
+  margin-left: 3px;
 }
 
 textarea,
@@ -27,5 +27,5 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  text-align: right; // RTL
+  text-align: right;
 }

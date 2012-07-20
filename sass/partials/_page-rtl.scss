@@ -2,12 +2,12 @@
 
 .grid-dis-header {
   #hgroup-first {
-    @include float(right); // RTL
+    @include float(right);
   }
   #hgroup-second {
-    @include float(right); // RTL
+    @include float(right);
   }
   #hgroup-third {
-    @include float(left); // RTL
+    @include float(left);
   }
 }

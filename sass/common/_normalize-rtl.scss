@@ -3,7 +3,7 @@
 /* Lists */
 
 dd {
-  margin: 0 $typographic-indent 0 0; // RTL
+  margin: 0 $typographic-indent 0 0;
 }
 
 /*
@@ -14,5 +14,5 @@ menu,
 ol,
 ul,
 .item-list ul /* Drupal override */ {
-  padding: 0 $typographic-indent 0 0; // RTL
+  padding: 0 $typographic-indent 0 0;
 }
