@@ -75,12 +75,12 @@ $form-disabled:                #888888;
 // Uncomment to override default class if you modified page.tpl.php
 // $aether-limiter-class:                "limiter";
 
-// Either use a fluid or fixed layout
-$aether-grid-type-desktop:            fluid;
-$aether-grid-type-tablet-landscape:   fluid;
-$aether-grid-type-tablet:             fluid;
-$aether-grid-type-handheld-landscape: fluid;
-$aether-grid-type-handheld:           fluid;
+// Either use a fluid, fixed or hybrid layout
+$aether-grid-type-desktop:            hybrid;
+$aether-grid-type-tablet-landscape:   hybrid;
+$aether-grid-type-tablet:             hybrid;
+$aether-grid-type-handheld-landscape: hybrid;
+$aether-grid-type-handheld:           hybrid;
 
 // Used by aether-grid/mediaqueries and aether-grid/visibility.
 // Media Query Breakpoints.
@@ -108,18 +108,6 @@ $grid-background-baseline-color:      hsla(0, 0%, 87%,0.5);
 // Vertical Rhythm
 $aether-base-line-height:             18px;
 $aether-base-font-size:               13px;
-
-// Used by aether-grid/*
-// Media prefixes
-$aether-gridprefix:                   "g";
-$aether-offset_prefix:                "o";
-$aether-pull_prefix:                  "pull";
-$aether-push_prefix:                  "push";
-$aether-desktop:                      "d";
-$aether-tablet-landscape:             "tl";
-$aether-tablet:                       "t";
-$aether-handheld-landscape:           "hl";
-$aether-handheld:                     "h";
 
 // Configuration
 $aether-columns-desktop:              12; // The number of columns in your large grid.

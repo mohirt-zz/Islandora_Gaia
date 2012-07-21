@@ -37,12 +37,12 @@ $legacy-support-for-ie7:              true;
 // Uncomment to override default class if you modified page.tpl.php
 // $aether-limiter-class:                "limiter";
 
-// Either use a fluid or fixed layout
-$aether-grid-type-desktop:            fluid;
-$aether-grid-type-tablet-landscape:   fluid;
-$aether-grid-type-tablet:             fluid;
-$aether-grid-type-handheld-landscape: fluid;
-$aether-grid-type-handheld:           fluid;
+// Either use a fluid, fixed or hybrid layout
+$aether-grid-type-desktop:            hybrid;
+$aether-grid-type-tablet-landscape:   hybrid;
+$aether-grid-type-tablet:             hybrid;
+$aether-grid-type-handheld-landscape: hybrid;
+$aether-grid-type-handheld:           hybrid;
 
 // Used by aether-grid/mediaqueries and aether-grid/visibility.
 // Media Query Breakpoints.

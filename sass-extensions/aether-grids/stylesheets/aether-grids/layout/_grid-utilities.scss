@@ -35,7 +35,7 @@ $aether-media: "d" !default;
   @if $float-direction == left {
     float: left;
   }
-  @if $aether-grid-type == fluid {
+  @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
     width: percentage($span-col-px / $grid-width);
   }
   @else {
@@ -52,7 +52,7 @@ $aether-media: "d" !default;
   $column-width: col-width($columns,$grid-width);
   $grid-width: $grid-width - gutter();
   $offset-left-px: $n * gutter() + $n * $column-width;
-  @if $aether-grid-type == fluid {
+  @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
     margin: {
       @if $aether-float-direction == right {
         right: percentage($offset-left-px / $grid-width);
@@ -86,7 +86,7 @@ $aether-media: "d" !default;
   $push-right-px: (-$n * gutter() - $n * $column-width) + gutter($aether-gutter-width, half);
   @if $aether-grid-type == fluid {
     margin: {
-      @if $aether-float-direction == right {
+      @if $aether-float-direction == right or $aether-grid-type == hybrid {
         right: percentage($push-left-px / $grid-width);
         left: percentage($push-right-px / $grid-width);
       }
@@ -120,7 +120,7 @@ $aether-media: "d" !default;
   $pull-left-px: (-$n * gutter() - $n * $column-width) + gutter($aether-gutter-width, half);
   @if $aether-grid-type == fluid {
     margin: {
-      @if $aether-float-direction == right {
+      @if $aether-float-direction == right or $aether-grid-type == hybrid {
         right: percentage($pull-left-px / $grid-width);
       }
       @else {
@@ -169,7 +169,7 @@ $aether-media: "d" !default;
   @include background-clip(padding-box);
   @include float($float-direction);
   margin: {
-    @if $aether-grid-type == fluid {
+    @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
       left: percentage($half-gutter / $grid-width);
       right: percentage($half-gutter / $grid-width);
     } @else {
