@@ -23,8 +23,8 @@ html {
 }
 
 .g-all-row {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0.871%;
+  margin-right: 0.871%;
 }
 .g-all-row:after {
   clear: both;
@@ -40,8 +40,8 @@ html {
   min-height: 1%;
 }
 .g-all-row .g-all-row {
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -0.871%;
+  margin-right: -0.871%;
 }
 .g-all-row .g-all-row:after {
   clear: both;

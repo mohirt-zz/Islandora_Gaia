@@ -185,9 +185,9 @@ $aether-media: "d" !default;
   @include clearfix();
   @if $aether-context == 'nested' {
     margin: {
-    @if $aether-grid-type == fluid {
-      left: (gutter($aether-gutter-width,half) + $aether-column-padding-h)*-1;
-      right: (gutter($aether-gutter-width,half) + $aether-column-padding-h)*-1;
+    @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
+      left: percentage($half-gutter-padding / $grid-width);
+      right: percentage($half-gutter-padding / $grid-width);
     } @else {
       left: $half-gutter-padding;
       right: $half-gutter-padding;
@@ -196,7 +196,7 @@ $aether-media: "d" !default;
   } 
   @else if $aether-context == 'full' {
     margin: {
-    @if $aether-grid-type == fluid {
+    @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
       left: percentage($half-gutter / $grid-width);
       right: percentage($half-gutter / $grid-width);
     } @else {
