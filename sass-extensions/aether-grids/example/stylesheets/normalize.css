@@ -58,9 +58,7 @@ nav ul, nav ol { list-style: none; list-style-image: none; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; } }
-body { font-size: 81.25%; line-height: 1.38462em; }
-
-html > body { font-size: 13px; }
+html { font-size: 81.25%; line-height: 1.38462em; }
 
 /* Headings/small */
 h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", "Helvetica", Arial, "Liberation Sans", FreeSans, sans-serif; font-size: 1em; font-weight: bold; }

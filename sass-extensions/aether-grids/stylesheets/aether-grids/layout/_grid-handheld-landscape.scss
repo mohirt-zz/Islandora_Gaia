@@ -13,13 +13,7 @@ $aether-media: $aether-media-handheld-landscape;
     -webkit-text-size-adjust: none;
   }
 
-  @include limiter($aether-limiter-class, $aether-grid-width, $aether-break-small);
-
-  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
-
-  #{$aether_allColumns} {
-    @include grid-item-base($aether-float-direction, gutter(), $aether-box-sizing, $aether-grid-width);
-  }
+  @include limiter;
 
   .#{$aether-gridprefix}-all-row {
     @include container(full);

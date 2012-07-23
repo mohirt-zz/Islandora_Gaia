@@ -7,7 +7,7 @@ $legacy-support-for-ie6:              true !default;
 $legacy-support-for-ie7:              true !default;
 
 // Set your limiter class, this is used to limit and center the width of the page
-$aether-limiter-class:                "limiter" !default;
+$aether-limiter-class:                ".limiter" !default;
 
 // Either use a fluid or fixed layout
 $aether-grid-type-desktop:            fixed !default;

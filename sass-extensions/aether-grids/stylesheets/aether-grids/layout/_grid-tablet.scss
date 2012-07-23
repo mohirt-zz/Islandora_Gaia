@@ -7,13 +7,7 @@ $aether-media: $aether-media-tablet;
 
 /*  Tablet Portrait */
 @include respond-to(tablet)  {
-  @include limiter($aether-limiter-class, $aether-grid-width, $aether-break-medium);
-
-  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
-
-  #{$aether_allColumns} {
-    @include grid-item-base;
-  }
+  @include limiter;
 
   .#{$aether-gridprefix}-all-row {
     @include container(full);

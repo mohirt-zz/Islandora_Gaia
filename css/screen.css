@@ -37,7 +37,7 @@ figcaption,
 button,
 hr {
   margin-top: 0em;
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
 }
 
 audio,
@@ -129,7 +129,7 @@ menu,
 ol,
 ul,
 .item-list ul {
-  margin: 1.357em 0;
+  margin: 1.35714em 0;
 }
 
 .item-list ul li {
@@ -221,13 +221,9 @@ nav ol {
 /*
  * Type
  */
-body {
+html {
   font-size: 87.5%;
-  line-height: 1.357em;
-}
-
-html > body {
-  font-size: 14px;
+  line-height: 1.35714em;
 }
 
 @font-face {
@@ -238,13 +234,9 @@ html > body {
   src: url('fonts/DroidSans.eot?#iefix') format("embedded-opentype"), url('fonts/DroidSans.woff') format("woff"), url('fonts/DroidSans.ttf') format("truetype"), url('fonts/DroidSans.svg#DroidSansRegular') format("svg"), url('fonts/DroidSans.otf') format("opentype");
 }
 
-body {
+html {
   font-size: 87.5%;
-  line-height: 1.357em;
-}
-
-html > body {
-  font-size: 14px;
+  line-height: 1.35714em;
 }
 
 /* Headings/small */
@@ -260,52 +252,52 @@ h6 {
 }
 
 h1 {
-  font-size: 1.714em;
-  line-height: 1.583em;
+  font-size: 1.71429em;
+  line-height: 1.58333em;
   margin-top: 0em;
-  margin-bottom: 0.792em;
+  margin-bottom: 0.79167em;
 }
 
 h2 {
-  font-size: 1.286em;
-  line-height: 2.111em;
+  font-size: 1.28571em;
+  line-height: 2.11111em;
   margin-top: 0em;
-  margin-bottom: 1.056em;
+  margin-bottom: 1.05556em;
 }
 
 h3 {
-  font-size: 1.143em;
-  line-height: 1.188em;
+  font-size: 1.14286em;
+  line-height: 1.1875em;
   margin-top: 0em;
-  margin-bottom: 1.188em;
+  margin-bottom: 1.1875em;
 }
 
 h4 {
-  font-size: 1.143em;
-  line-height: 1.188em;
+  font-size: 1.14286em;
+  line-height: 1.1875em;
   margin-top: 0em;
-  margin-bottom: 1.188em;
+  margin-bottom: 1.1875em;
 }
 
 h5 {
   font-size: 1em;
-  line-height: 1.357em;
+  line-height: 1.35714em;
   margin-top: 0em;
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
 }
 
 h6 {
   font-size: 1em;
-  line-height: 1.357em;
+  line-height: 1.35714em;
   margin-top: 0em;
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
   color: #b7b7b7;
 }
 
 small {
   margin-top: 0em;
   margin-bottom: 1.9em;
-  font-size: 0.714em;
+  font-size: 0.71429em;
 }
 
 h1 small,
@@ -325,14 +317,14 @@ dfn[title] {
 }
 
 sub {
-  font-size: 0.714em;
+  font-size: 0.71429em;
   line-height: 0em;
   position: relative;
   vertical-align: baseline;
 }
 
 sup {
-  font-size: 0.714em;
+  font-size: 0.71429em;
   line-height: 0em;
   position: relative;
   top: -0.5em;
@@ -357,7 +349,7 @@ figure {
 
 pre {
   font-size: 1em;
-  line-height: 1.357em;
+  line-height: 1.35714em;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
   white-space: pre;
   white-space: pre-wrap;
@@ -368,7 +360,7 @@ code,
 kbd,
 samp {
   font-size: 1em;
-  line-height: 1.221em;
+  line-height: 1.22143em;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 }
 
@@ -403,17 +395,17 @@ blockquote > p {
 
 /* Description Lists */
 dl {
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
 }
 dl dt,
 dl dd {
-  line-height: 1.357em;
+  line-height: 1.35714em;
 }
 dl dt {
   font-weight: bold;
 }
 dl dd {
-  margin-left: 0.813em;
+  margin-left: 0.8125em;
 }
 
 /* Marked/inserted/deleted text */
@@ -573,8 +565,8 @@ button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"] {
-  font-size: 0.857em;
-  line-height: 1.583em;
+  font-size: 0.85714em;
+  line-height: 1.58333em;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -644,8 +636,8 @@ input[type="button"]:active {
 }
 
 .ie6 .form-submit {
-  font-size: 0.857em;
-  line-height: 1.583em;
+  font-size: 0.85714em;
+  line-height: 1.58333em;
   background: #dddddd url('../images/button.png?1341847027') repeat-x;
   border: 1px solid;
   border-color: #dddddd #b9b9b9 #989898;
@@ -704,7 +696,7 @@ input[type="week"] {
   border: 1px solid;
   border-color: #cccccc #e6e6e6 #e6e6e6;
   font-size: 1em;
-  line-height: 1.357em;
+  line-height: 1.35714em;
   color: black;
   outline: 0;
   padding: 3px;
@@ -753,7 +745,7 @@ input[type="week"][disabled] {
 .ie6 select,
 .ie6 input.form-text {
   font-size: 1em;
-  line-height: 1.357em;
+  line-height: 1.35714em;
   background: white;
   border: 1px solid;
   border-color: #cccccc #e6e6e6 #e6e6e6;
@@ -835,8 +827,8 @@ select[multiple] {
     border-color: #cccccc #e6e6e6 #e6e6e6;
     color: white;
     font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-    font-size: 0.857em;
-    line-height: 1.583em;
+    font-size: 0.85714em;
+    line-height: 1.58333em;
     height: 16px;
     overflow: hidden;
     padding: 15px 15px 17px;
@@ -873,21 +865,21 @@ optgroup {
 /* Form vertical rhythm */
 fieldset {
   border-style: solid;
-  border-width: 0.071em;
-  padding: 1.286em;
+  border-width: 0.07143em;
+  padding: 1.28571em;
   border-color: #b4b4b4;
 }
 
 .form-item,
 .form-actions {
-  margin-top: 1.357em;
-  margin-bottom: 1.357em;
+  margin-top: 1.35714em;
+  margin-bottom: 1.35714em;
 }
 
 .container-inline .form-actions,
 .container-inline.form-actions {
-  margin-top: 1.357em;
-  margin-bottom: 1.357em;
+  margin-top: 1.35714em;
+  margin-bottom: 1.35714em;
 }
 
 .form-type-textfield,
@@ -896,8 +888,8 @@ fieldset {
 .form-type-file,
 .form-type-managed-file,
 .form-type-password {
-  margin-top: 1.357em;
-  margin-bottom: 1.357em;
+  margin-top: 1.35714em;
+  margin-bottom: 1.35714em;
 }
 
 input.password-confirm,
@@ -917,7 +909,7 @@ input.password-field {
 /* Baseline Styles */
 table {
   border-collapse: collapse;
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
   padding: 0;
   width: 100%;
 }
@@ -929,25 +921,25 @@ table td {
 }
 table th {
   border-bottom-style: solid;
-  border-bottom-width: 0.071em;
-  padding-bottom: 0.607em;
-  padding-top: 0.679em;
+  border-bottom-width: 0.07143em;
+  padding-bottom: 0.60714em;
+  padding-top: 0.67857em;
   border-color: #ccc;
   font-weight: bold;
   vertical-align: middle;
 }
 table td {
   border-top-style: solid;
-  border-top-width: 0.071em;
-  padding-top: 0.607em;
-  padding-bottom: 0.679em;
+  border-top-width: 0.07143em;
+  padding-top: 0.60714em;
+  padding-bottom: 0.67857em;
   border-color: #ddd;
   vertical-align: top;
 }
 table tbody th {
   border-top-style: solid;
-  border-top-width: 0.071em;
-  padding-top: 0.607em;
+  border-top-width: 0.07143em;
+  padding-top: 0.60714em;
   border-color: #ddd;
   vertical-align: top;
 }
@@ -958,20 +950,20 @@ table tr.odd {
 
 .condensed-table td {
   border-top-style: solid;
-  border-top-width: 0.071em;
-  padding-top: 0.268em;
-  padding-bottom: 0.339em;
+  border-top-width: 0.07143em;
+  padding-top: 0.26786em;
+  padding-bottom: 0.33929em;
 }
 .condensed-table th {
   border-bottom-style: solid;
-  border-bottom-width: 0.071em;
-  padding-bottom: 0.268em;
-  padding-top: 0.339em;
+  border-bottom-width: 0.07143em;
+  padding-bottom: 0.26786em;
+  padding-top: 0.33929em;
 }
 .condensed-table tbody th {
   border-top-style: solid;
-  border-top-width: 0.071em;
-  padding-top: 0.268em;
+  border-top-width: 0.07143em;
+  padding-top: 0.26786em;
 }
 
 /* Responsive Tables */
@@ -1108,8 +1100,8 @@ table tr.odd {
   margin-bottom: 0em;
 }
 .draggable a.tabledrag-handle .handle {
-  margin-top: 0.271em;
-  margin-bottom: 0.271em;
+  margin-top: 0.27143em;
+  margin-bottom: 0.27143em;
 }
 
 /*
@@ -1119,8 +1111,8 @@ table tr.odd {
 .primary,
 .secondary {
   border-bottom-style: solid;
-  border-bottom-width: 0.083em;
-  padding-bottom: 0.629em;
+  border-bottom-width: 0.08333em;
+  padding-bottom: 0.62917em;
   border-color: #bbbbbb;
   list-style: none;
   margin-left: 0;
@@ -1159,17 +1151,13 @@ table tr.odd {
   padding: 0 2px;
 }
 .primary li {
-  font-size: 0.857em;
+  font-size: 0.85714em;
   line-height: 1.425em;
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
-  -ms-border-top-left-radius: 4px;
-  -o-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
-  -ms-border-top-right-radius: 4px;
-  -o-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
   text-shadow: white 1px 1px 0;
   border-color: #bbbbbb;
@@ -1183,13 +1171,9 @@ table tr.odd {
 .primary a:link, .primary a:visited {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
-  -ms-border-top-left-radius: 4px;
-  -o-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
-  -ms-border-top-right-radius: 4px;
-  -o-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
@@ -1225,25 +1209,25 @@ table tr.odd {
 
 /* Secondary tabs */
 .secondary {
-  margin-top: -1.029em;
-  font-size: 0.857em;
+  margin-top: -1.02917em;
+  font-size: 0.85714em;
 }
 .secondary li {
-  margin-top: 0.097em;
-  margin-bottom: 0.097em;
+  margin-top: 0.09658em;
+  margin-bottom: 0.09658em;
 }
 .secondary li li {
   float: none;
 }
 .secondary a {
-  font-size: 0.857em;
+  font-size: 0.85714em;
   -webkit-border-radius: 2em;
   -moz-border-radius: 2em;
   -ms-border-radius: 2em;
   -o-border-radius: 2em;
   border-radius: 2em;
   border-style: solid;
-  border-width: 0.083em;
+  border-width: 0.08333em;
   padding: 1.5em;
   border-right: 0;
   border-bottom: 0;
@@ -1301,8 +1285,8 @@ table tr.odd {
   white-space: nowrap;
   display: inline;
   float: left;
-  padding-left: 1.385em;
-  padding-right: 1.385em;
+  padding-left: 1.38462em;
+  padding-right: 1.38462em;
 }
 .grid-dis-nav #primary li:first-child, .grid-dis-nav #primary li.first {
   padding-left: 0;
@@ -1339,7 +1323,7 @@ table tr.odd {
   border-radius: 4px;
   border-style: solid;
   border-width: 0em;
-  padding: 1.357em;
+  padding: 1.35714em;
   border-right: 0;
   border-bottom: 0;
   padding: 0.5em 1em 0.5em 1em;
@@ -1380,8 +1364,8 @@ table tr.odd {
 
 #secondary {
   float: right;
-  margin-top: 1.154em;
-  margin-bottom: 1.154em;
+  margin-top: 1.15357em;
+  margin-bottom: 1.15357em;
 }
 @media only screen and (max-width: 767px) {
   #secondary {
@@ -1527,8 +1511,8 @@ ul.action-links li.last {
   color: #6f6f6f;
 }
 .breadcrumb ul {
-  margin-top: 0.679em;
-  margin-bottom: 0.679em;
+  margin-top: 0.67857em;
+  margin-bottom: 0.67857em;
   margin-left: 0;
   padding-left: 0;
 }
@@ -1573,15 +1557,15 @@ ul li.leaf {
  * Blocks
  */
 .block {
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
 }
 
 #content .content-block {
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
 }
 
 #footer .footer-inner {
-  margin-top: 1.357em;
+  margin-top: 1.35714em;
 }
 
 /*
@@ -1595,7 +1579,7 @@ ul li.leaf {
 .postscript-inner,
 .sidebar-inner,
 .footer-inner {
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
 }
 
 /* Header */
@@ -1635,14 +1619,14 @@ body {
   *display: inline;
 }
 .branding .logo img {
-  margin-top: 0.814em;
-  margin-bottom: 0.543em;
+  margin-top: 0.81429em;
+  margin-bottom: 0.54286em;
 }
 .branding .site-name {
-  font-size: 1.714em;
-  line-height: 0.792em;
+  font-size: 1.71429em;
+  line-height: 0.79167em;
   margin-top: 0em;
-  margin-bottom: 0.317em;
+  margin-bottom: 0.31667em;
   font-family: "DroidSansRegular", Arial, sans-serif;
 }
 .branding .site-name a {
@@ -1662,8 +1646,8 @@ body {
   color: #444444;
 }
 .branding .site-slogan {
-  font-size: 1.143em;
-  line-height: 0.713em;
+  font-size: 1.14286em;
+  line-height: 0.7125em;
 }
 
 #content .content-inner,
@@ -1675,8 +1659,8 @@ body {
   border-radius: 5px;
   background-color: white;
   border-style: solid;
-  border-width: 0.071em;
-  padding: 1.286em;
+  border-width: 0.07143em;
+  padding: 1.28571em;
   border-color: #ccc;
   border: 1px solid #d8d8d8;
 }
@@ -1685,7 +1669,7 @@ body {
   margin-bottom: 0em;
 }
 #footer .footer-wrapper {
-  padding-top: 1.357em;
+  padding-top: 1.35714em;
 }
 #footer .footer-row, #footer .footer-columns-row {
   -webkit-border-radius: 4px;
@@ -1708,10 +1692,10 @@ div.messages {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
   border-style: solid;
-  border-width: 0.071em;
-  padding: 0.607em;
+  border-width: 0.07143em;
+  padding: 0.60714em;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
   background-position: 0;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -1748,17 +1732,17 @@ div.messages.error {
  * Node Styling
  */
 .node .field {
-  margin-top: 1.357em;
-  margin-bottom: 1.357em;
+  margin-top: 1.35714em;
+  margin-bottom: 1.35714em;
 }
 .node .submitted {
-  margin-top: 1.357em;
-  margin-bottom: 1.357em;
+  margin-top: 1.35714em;
+  margin-bottom: 1.35714em;
   color: #b7b7b7;
 }
 .node ul.links {
-  margin-top: 1.357em;
-  margin-bottom: 1.357em;
+  margin-top: 1.35714em;
+  margin-bottom: 1.35714em;
 }
 
 .node-teaser {
@@ -1766,14 +1750,14 @@ div.messages.error {
 }
 .node-teaser .submitted {
   margin-top: 0em;
-  margin-bottom: 1.357em;
+  margin-bottom: 1.35714em;
 }
 .node-teaser h2 {
   margin-bottom: 0em;
 }
 .node-teaser .field {
-  margin-top: 0.679em;
-  margin-bottom: 0.679em;
+  margin-top: 0.67857em;
+  margin-bottom: 0.67857em;
 }
 .node-teaser ul.links {
   float: right;

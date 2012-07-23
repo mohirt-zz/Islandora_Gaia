@@ -35,7 +35,7 @@ $legacy-support-for-ie7:              true;
 
 // This is used to limit and center the width of the page
 // Uncomment to override default class if you modified page.tpl.php
-// $aether-limiter-class:                "limiter";
+// $aether-limiter-class:                ".limiter";
 
 // Either use a fluid, fixed or hybrid layout
 $aether-grid-type-desktop:            hybrid;

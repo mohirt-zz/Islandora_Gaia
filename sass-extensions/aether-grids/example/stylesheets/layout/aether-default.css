@@ -2,13 +2,15 @@ html { overflow: auto; overflow-x: hidden; }
 
 .limiter { margin-left: auto; margin-right: auto; width: 1148px; }
 
-.g-d-1, .g-d-2, .g-d-3, .g-d-4, #aside1, #aside2, .g-d-5, .g-d-6, .g-d-7, .g-d-8, #content, .g-d-9, .g-d-10, .g-d-11, .g-d-12, .g-d-clear { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-background-clip: padding; -moz-background-clip: padding; background-clip: padding-box; display: inline; float: left; margin-left: 0.87108%; margin-right: 0.87108%; }
+.g-h-1, .g-h-2, .g-h-3, .g-h-4, .g-h-5, .g-h-6, .g-h-7, .g-h-8, .g-h-9, .g-h-10, .g-h-11, .g-h-12, #content, #aside1, #aside2, .g-hl-1, .g-hl-2, .g-hl-3, .g-hl-4, .g-hl-5, .g-hl-6, #content, #aside1, .g-hl-7, .g-hl-8, .g-hl-9, .g-hl-10, .g-hl-11, .g-hl-12, #aside2, .g-t-1, .g-t-2, .g-t-3, .g-t-4, #aside1, .g-t-5, .g-t-6, .g-t-7, .g-t-8, #content, #aside2, .g-t-9, .g-t-10, .g-t-11, .g-t-12, .g-tl-1, .g-tl-2, .g-tl-3, .g-tl-4, #aside1, #aside2, .g-tl-5, .g-tl-6, .g-tl-7, .g-tl-8, #content, .g-tl-9, .g-tl-10, .g-tl-11, .g-tl-12, .g-d-1, .g-d-2, .g-d-3, .g-d-4, #aside1, #aside2, .g-d-5, .g-d-6, .g-d-7, .g-d-8, #content, .g-d-9, .g-d-10, .g-d-11, .g-d-12 { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-background-clip: padding; -moz-background-clip: padding; background-clip: padding-box; display: inline; float: left; margin-left: 0.87108%; margin-right: 0.87108%; }
 
-.g-all-row, #main { margin-left: 10px; margin-right: 10px; }
+.g-h-right, .g-hl-right, .g-t-right, #aside1, .g-tl-right, #aside2 { /* empty rule */ }
+
+.g-all-row, #main { margin-left: 0.87108%; margin-right: 0.87108%; }
 .g-all-row:after, #main:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
 .ie6 .g-all-row, .ie6 #main { height: 1%; }
 .ie7 .g-all-row, .ie7 #main { min-height: 1%; }
-.g-all-row .g-all-row, #main .g-all-row, .g-all-row #main, #main #main { margin-left: -10px; margin-right: -10px; }
+.g-all-row .g-all-row, #main .g-all-row, .g-all-row #main, #main #main { margin-left: -0.87108%; margin-right: -0.87108%; }
 .g-all-row .g-all-row:after, #main .g-all-row:after, .g-all-row #main:after, #main #main:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
 .ie6 .g-all-row .g-all-row, .ie6 #main .g-all-row, .ie6 .g-all-row #main, .ie6 #main #main { height: 1%; }
 .ie7 .g-all-row .g-all-row, .ie7 #main .g-all-row, .ie7 .g-all-row #main, .ie7 #main #main { min-height: 1%; }
@@ -35,13 +37,13 @@ html { overflow: auto; overflow-x: hidden; }
 
 .g-d-11 { width: 89.89362%; }
 
-.g-d-12, .g-d-clear { width: 98.22695%; }
+.g-d-12 { width: 98.22695%; }
 
 .g-d-center, .g-all-center { margin-left: auto; margin-right: auto; float: none; display: block; }
 
 .g-d-center-text, .g-all-center-text { text-align: center; float: none; display: block; }
 
-.g-d-12, .g-d-clear { clear: both; }
+.g-d-clear, .g-d-12, .g-all-clear { clear: both; }
 
 .g-d-o1 { margin-left: 8.33333%; width: 100%; }
 

@@ -11,12 +11,6 @@ $aether-media: $aether-media-handheld;
 
   @include zero-classes($aether-media-desktop,$aether-columns-desktop);
 
-  $aether_allColumns: #{enumerate(".#{$aether-gridprefix}-#{$aether-media}", 1, $aether-columns)};
-
-  #{$aether_allColumns} {
-	float: $aether-float-direction;
-  }
-
   // Generate column classes for handheld landscape media
   @include grid-classes(rtl);
 
