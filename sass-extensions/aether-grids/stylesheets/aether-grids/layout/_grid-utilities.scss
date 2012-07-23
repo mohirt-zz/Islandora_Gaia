@@ -35,19 +35,9 @@ $aether-limiter-class: '.limiter';
   @if $aether-column-padding-v > 0 and $aether-column-padding-h > 0 {
     padding: $aether-column-padding-v $aether-column-padding-h;
   }
-  $half-gutter: gutter($aether-gutter-width, half);
   @include box-sizing($box-sizing);
   @include background-clip(padding-box);
   @include float($float-direction);
-  margin: {
-    @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
-      left: percentage($half-gutter / $grid-width);
-      right: percentage($half-gutter / $grid-width);
-    } @else {
-      left: gutter($aether-gutter-width, half);
-      right: gutter($aether-gutter-width, half);
-    }
-  }
 }
 
 @mixin span-columns(
@@ -59,6 +49,16 @@ $aether-limiter-class: '.limiter';
   $column-width: col-width($columns,$grid-width);
   $grid-width: $grid-width - gutter();
   $span-col-px: ($n * gutter() + $n * $column-width) - gutter();
+  $half-gutter: gutter($aether-gutter-width, half);
+  margin: {
+    @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
+      left: percentage($half-gutter / $grid-width);
+      right: percentage($half-gutter / $grid-width);
+    } @else {
+      left: gutter($aether-gutter-width, half);
+      right: gutter($aether-gutter-width, half);
+    }
+  }
   @if $aether-include-grid-item-base == true {
     @include grid-item-base;
   }
@@ -206,13 +206,13 @@ $aether-limiter-class: '.limiter';
   @include clearfix();
   @if $aether-context == 'nested' {
     margin: {
-    @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
-      left: percentage($half-gutter-padding / $grid-width);
-      right: percentage($half-gutter-padding / $grid-width);
-    } @else {
-      left: $half-gutter-padding;
-      right: $half-gutter-padding;
-    }
+      @if $aether-grid-type == fluid or $aether-grid-type == hybrid {
+        left: percentage($half-gutter-padding / $grid-width);
+        right: percentage($half-gutter-padding / $grid-width);
+      } @else {
+        left: $half-gutter-padding;
+        right: $half-gutter-padding;
+      }
     }
   } 
   @else if $aether-context == 'full' {
